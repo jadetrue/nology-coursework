@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+*::selection {
+    color: white;
+    background-color: #1182eb;
+}
+
+body {
+    background-color: white;
+    max-width: 1400px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    height: 80px;
+    padding: 40px;
+    color: rgb(94, 92, 89);
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+.card {
+    width: 300px;
+    height: auto;
+    border: 1px solid grey;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    color: midnightblue;
+    box-shadow: 5px 5px 5px 5px lightgray;
+    opacity: 0.5;
+    transition: opaacity 0.3s ease;
+}
+
+.card:hover {
+    opacity: 1;
+}
+
+.card img {
+    margin: 10px;
+    min-height: 300px;
+    border-radius: 30px;
+}
+
+h2, h3, h4, h5, h6 {
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+#penelopes-list {
+    list-style-type: none;
+}
+
+li:hover {
+    color: #1182eb;
+    cursor: pointer;
+}
+
+span {
+    font-size: 1.5em;
+    color: #b48ce0;
+}
