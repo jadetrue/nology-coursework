@@ -1,0 +1,88 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+p {
+    text-align: center;
+    padding: 20px;
+}
+
+div {
+    height: 300px;
+    width: 600px;
+}
+
+.row {
+    width: 100%;
+    height:100px;
+}
+
+.column {
+    width: 200px;
+    height: 300px;
+}
+
+#german {
+    background: #ffcc00;
+}
+
+#black {
+    background-color: #000;
+}
+
+#german .red {
+    background-color: #ff0000;
+}
+
+/* Hovering Effects for German to Hungarian */
+
+#german:hover > .red {
+    background-color: #fff;
+}
+#german:hover > #black {
+    background-color: #ce2939;
+}
+#german:hover {
+    background-color: #477050;
+}
+
+/* End of hover */
+
+#france {
+    background: #0055a4;
+    position: relative;
+}
+
+#white {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 200px;
+}
+
+#france .red {
+    background-color: #ef4135;
+    position: absolute;
+    top: 0;
+    left: 400px;
+}
+
+/* Hovering Effects from France to Irish */
+
+#france:hover > .red {
+    background-color: #ff883e;
+}
+
+#france:hover {
+    background-color: #169b62;
+}
+
+/* End of hover */
