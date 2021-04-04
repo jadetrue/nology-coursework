@@ -91,10 +91,6 @@ a:visited {
   font-weight: bold;
 }
 
-.footer__text {
-  color: #fafafa;
-}
-
 .header {
   display: flex;
   justify-content: center;
@@ -114,7 +110,10 @@ a:visited {
   background-color: #28527a;
   height: 10vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 20px;
   margin-top: 5vh;
+}
+.footer__text {
+  color: #fafafa;
 }
