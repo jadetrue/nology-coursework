@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.main {
+    height: 50vh;
+    background-color: $primary-colour;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    background-color: $primary-colour;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin-top: 5vh;
+
+    &__text {
+        color: $white-colour;
+    }
+
+}

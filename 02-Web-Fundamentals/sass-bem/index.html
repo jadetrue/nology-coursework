@@ -10,18 +10,45 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="navigation">
         <a href="#" class="logo">My Website</a>
         <a href="#" class="button">login</a>
     </nav>
 
-    <header>
-        <div>
-            <h1>Hello</h1>
-            <h2>Welcome to my website</h2>
-            <a href="#" class="button">scroll</a>
+    <header class="header">
+        <div class="intro">
+            <h1 class="intro__heading">Hello</h1>
+            <h2 class="intro__sub-heading">Welcome to my website</h2>
+            <a href="#" class="intro__button button">scroll</a>
         </div>
     </header>
+
+    <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#28527a" fill-opacity="1" d="M0,192L48,208C96,224,192,256,288,240C384,224,480,160,576,117.3C672,75,768,53,864,69.3C960,85,1056,139,1152,170.7C1248,203,1344,213,1392,218.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+    <section class="main">
+        <form action="" class="form">
+            <label for="name" class="form__label">Name</label>
+            <input type="text" name="name" class="form__input">
+
+            <label for="email" class="form__label">Email:</label>
+            <input type="email" class="form__input">
+
+            <button class="button button--form">Send</button>
+        </form>
+    </section>
+
+    <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#28527a" fill-opacity="1" d="M0,64L40,69.3C80,75,160,85,240,101.3C320,117,400,139,480,170.7C560,203,640,245,720,229.3C800,213,880,139,960,96C1040,53,1120,43,1200,48C1280,53,1360,75,1400,85.3L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+
+    <section class="logout">
+        <h2 class="logout__sub-heading">Thanks for visiting</h1>
+        <button class="button button--logout">Log out</button>
+    </section>
+
+    <footer class="footer">
+        <a href="#" class="logo">My Website</a>
+        <p class="footer__text">Copyright</p>
+        <p class="footer__text"><script>document.write(""+new Date().getFullYear());</script></p>
+    </footer>
 
 </body>
 
