@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: menu;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: right;
+}
+
+footer {
+  grid-area: footer;
+}
+
+section {
+  display: grid;
+  grid-template-areas: "header header header header header header" "menu main main main right right" "menu footer footer footer footer footer";
+  gap: 10px;
+  background-color: cornflowerblue;
+  padding: 10px;
+}
+section > * {
+  background-color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
