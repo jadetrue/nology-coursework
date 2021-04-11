@@ -30,6 +30,11 @@ a {
   align-items: center;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .landing-page__subtitle {
+    font-size: 18px;
+  }
+}
 
 section {
   min-height: 90vh;

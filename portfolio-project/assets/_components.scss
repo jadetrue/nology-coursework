@@ -15,5 +15,9 @@
         font-size: 35px;
         align-items: center;
         text-align: center;
+
+        @media (max-width: $layout-breakpoint-small) {
+            font-size: 18px;
+        }
     }
 }
