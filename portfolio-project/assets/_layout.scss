@@ -1,6 +1,8 @@
 // Layout, such as the container and any grid systems.
 
-
+section {
+    min-height: 90vh;
+}
 
 .nav {
     text-align: center;
@@ -14,12 +16,41 @@
         list-style: none;
 
         @media (max-width: $layout-breakpoint-small) {
-            flex-wrap: wrap;
+            display: none;
         }
     }
 
     &__item {
         width: 100%;
         padding: 30px;
+        transition: 300ms;
+        margin-top: 0px;
+        margin-bottom: 20px;
+
+        &:hover {
+            opacity: 0.5;
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
     }
+}
+
+/* .nav-mobile {
+    display: none;
+    height: 30px;
+    width: 100px;
+    background-color: $secondary-color;
+
+    @media (max-width: $layout-breakpoint-small) {
+        display: block;
+        margin: auto;
+    }
+} */
+
+.landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 70vh;
 }

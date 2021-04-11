@@ -1,1 +1,19 @@
 // Anything reusable goes in here.
+
+.landing-page {
+
+    &__title {
+        font-weight: 800;
+        font-size: 100px;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 35px;
+        align-items: center;
+        text-align: center;
+    }
+}

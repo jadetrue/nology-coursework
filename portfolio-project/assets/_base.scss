@@ -1,6 +1,6 @@
 // Resets, variables, mixins, and any utility classes.
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,800;1,300&display=swap');
 
 $primary-color: #03045E;
 $secondary-color: #CAF0F8;
@@ -14,4 +14,13 @@ $layout-breakpoint-small: 768px;
     font-family: 'Montserrat', sans-serif;
     background-color: $primary-color;
     color: $secondary-color;
+}
+
+::selection {
+    background-color: $secondary-color;
+    color: $primary-color;
+}
+
+a {
+    text-decoration: none;
 }
