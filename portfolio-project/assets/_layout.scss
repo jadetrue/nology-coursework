@@ -1,1 +1,25 @@
 // Layout, such as the container and any grid systems.
+
+
+
+.nav {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 30px;
+
+    &__item-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+
+        @media (max-width: $layout-breakpoint-small) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        padding: 30px;
+    }
+}

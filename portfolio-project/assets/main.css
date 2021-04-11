@@ -4,4 +4,27 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  background-color: #03045E;
+  color: #CAF0F8;
+}
+
+.nav {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 30px;
+}
+.nav__item-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+@media (max-width: 768px) {
+  .nav__item-wrapper {
+    flex-wrap: wrap;
+  }
+}
+.nav__item {
+  width: 100%;
+  padding: 30px;
 }
