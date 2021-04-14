@@ -20,4 +20,71 @@
             font-size: 18px;
         }
     }
+
+    &__chevron-down {
+        font-size: 60px;
+        position: absolute;
+        bottom: 4vh;
+        left: 0;
+        right: 0;
+        text-align: center;
+        animation: slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out infinite;
+        opacity: 0;
+        z-index: 10;
+    }
+}
+
+.social-icons {
+    font-size: 60px;
+
+    &__at {
+        transition: transform .7s ease-in-out;
+    }
+
+    &__git-hub {
+        transition: transform .7s ease-in-out;
+    }
+
+    &__at:hover {
+        opacity: .5;
+        transform: rotate(360deg);
+    }
+
+    &__git-hub:hover {
+        opacity: .5;
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Animations */
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(4rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: none
+    }
+
+    50% {
+        opacity: .8;
+        transform: scale(.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+
 }

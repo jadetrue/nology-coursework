@@ -6,6 +6,7 @@
   font-family: "Montserrat", sans-serif;
   background-color: #03045E;
   color: #CAF0F8;
+  overflow: hidden;
 }
 
 ::selection {
@@ -35,7 +36,60 @@ a {
     font-size: 18px;
   }
 }
+.landing-page__chevron-down {
+  font-size: 60px;
+  position: absolute;
+  bottom: 4vh;
+  left: 0;
+  right: 0;
+  text-align: center;
+  animation: slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out infinite;
+  opacity: 0;
+}
 
+.social-icons {
+  font-size: 60px;
+}
+.social-icons__at {
+  transition: transform 0.7s ease-in-out;
+}
+.social-icons__git-hub {
+  transition: transform 0.7s ease-in-out;
+}
+.social-icons__at:hover {
+  opacity: 0.5;
+  transform: rotate(360deg);
+}
+.social-icons__git-hub:hover {
+  opacity: 0.5;
+  transform: rotate(360deg);
+}
+
+/* Animations */
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 section {
   min-height: 90vh;
 }
@@ -86,4 +140,12 @@ section {
   align-items: center;
   flex-direction: column;
   min-height: 70vh;
+}
+
+.social-icons {
+  position: absolute;
+  width: 172px;
+  height: 77px;
+  left: 85%;
+  bottom: 4vh;
 }
