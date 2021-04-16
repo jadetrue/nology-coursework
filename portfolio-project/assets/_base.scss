@@ -14,12 +14,15 @@ $layout-breakpoint-small: 768px;
     font-family: 'Montserrat', sans-serif;
     background-color: $primary-color;
     color: $secondary-color;
-    overflow: hidden;
 }
 
 ::selection {
     background-color: $secondary-color;
     color: $primary-color;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 a {

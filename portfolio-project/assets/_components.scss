@@ -24,13 +24,34 @@
     &__chevron-down {
         font-size: 60px;
         position: absolute;
+        background: transparent;
         bottom: 4vh;
         left: 0;
         right: 0;
-        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
         animation: slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out infinite;
         opacity: 0;
         z-index: 10;
+    }
+}
+
+.about {
+
+    &__title {
+        font-weight: 800;
+        font-size: 90px;
+    }
+
+    &__description {
+        text-align: center;
+        padding: 20px;
+        font-size: 26px;
+        width: 70%;
+    }
+
+    & p {
+        margin-bottom: 30px;
     }
 }
 

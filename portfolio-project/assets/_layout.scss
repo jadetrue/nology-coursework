@@ -2,6 +2,10 @@
 
 section {
     min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .nav {
@@ -48,15 +52,32 @@ section {
 } */
 
 .landing-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     min-height: 70vh;
+    margin-bottom: 30vh;
 }
 
+.about {
+
+    &__image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: url(./images/20210412_142857.jpg);
+        filter: drop-shadow(0px 5px 50px rgba(0, 0, 0, 0.4));
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: center;
+    }
+
+    &__subtitle {
+        padding: 20px;
+        font-size: 40px;
+    }
+}
+
+
 .social-icons {
-    position: absolute;
+    position: fixed;
     width: 172px;
     height: 77px;
     left: 85%;
