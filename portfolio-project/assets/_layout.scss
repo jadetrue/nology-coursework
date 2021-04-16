@@ -1,11 +1,14 @@
 // Layout, such as the container and any grid systems.
 
+// Instead of changing styles when the width gets smaller than 768px, we should change the design when the width gets larger than 768px. This will make our design Mobile First.
+
 section {
     min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 20px;
 }
 
 .nav {
@@ -14,12 +17,16 @@ section {
     font-weight: 400;
     font-size: 30px;
 
+    @media (max-width: $layout-breakpoint-tablet) {
+        margin-top: 4vh;
+    }
+
     &__item-wrapper {
         display: flex;
         justify-content: space-evenly;
         list-style: none;
 
-        @media (max-width: $layout-breakpoint-small) {
+        @media (max-width: $layout-breakpoint-tablet) {
             display: none;
         }
     }
@@ -39,17 +46,17 @@ section {
     }
 }
 
-/* .nav-mobile {
-    display: none;
-    height: 30px;
-    width: 100px;
+.mobile-menu {
+    display: block;
     background-color: $secondary-color;
+    width: 75px;
+    height: 5px;
+    margin: 10px auto;
 
-    @media (max-width: $layout-breakpoint-small) {
-        display: block;
-        margin: auto;
+    @media (min-width: $layout-breakpoint-desktop) {
+        display: none;
     }
-} */
+}
 
 .landing-page {
     min-height: 70vh;
@@ -77,9 +84,17 @@ section {
 
 
 .social-icons {
-    position: fixed;
-    width: 172px;
-    height: 77px;
-    left: 85%;
-    bottom: 4vh;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    bottom: 20vh;
+
+    @media (min-width: $layout-breakpoint-desktop) {
+        position: fixed;
+        width: 172px;
+        height: 77px;
+        left: 85%;
+        bottom: 4vh;
+    }
 }

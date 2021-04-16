@@ -3,10 +3,31 @@
 .landing-page {
 
     &__title {
-        font-weight: 800;
-        font-size: 100px;
-        align-items: center;
+        font-size: 130px;
+        width: 100%;
         text-align: center;
+        line-height: 117px;
+        margin: 10%;
+
+        @media (min-width: $layout-breakpoint-mobile) {
+            width: 75%;
+        }
+
+        @media (min-width: $layout-breakpoint-small) {
+            width: 59%;
+        }
+
+        @media (min-width: $layout-breakpoint-laptop) {
+            font-size: 115px;
+        }
+
+        @media (min-width: $layout-breakpoint-desktop) {
+            font-weight: 800;
+            font-size: 115px;
+            width: 100%;
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__subtitle {
@@ -15,10 +36,6 @@
         font-size: 35px;
         align-items: center;
         text-align: center;
-
-        @media (max-width: $layout-breakpoint-small) {
-            font-size: 18px;
-        }
     }
 
     &__chevron-down {
@@ -59,21 +76,34 @@
     font-size: 60px;
 
     &__at {
-        transition: transform .7s ease-in-out;
+
+        @media (min-width: $layout-breakpoint-desktop) {
+            transition: transform .7s ease-in-out;
+        }
     }
 
     &__git-hub {
-        transition: transform .7s ease-in-out;
+
+
+        @media (min-width: $layout-breakpoint-desktop) {
+            transition: transform .7s ease-in-out;
+        }
     }
 
     &__at:hover {
-        opacity: .5;
-        transform: rotate(360deg);
+
+        @media (min-width: $layout-breakpoint-desktop) {
+            opacity: .5;
+            transform: rotate(360deg);
+        }
     }
 
     &__git-hub:hover {
-        opacity: .5;
-        transform: rotate(360deg);
+
+        @media (min-width: $layout-breakpoint-desktop) {
+            opacity: .5;
+            transform: rotate(360deg);
+        }
     }
 }
 
