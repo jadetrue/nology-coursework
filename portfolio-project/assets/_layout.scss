@@ -3,7 +3,7 @@
 // Instead of changing styles when the width gets smaller than 768px, we should change the design when the width gets larger than 768px. This will make our design Mobile First.
 
 section {
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,8 +56,11 @@ section {
 }
 
 .landing-page {
-    min-height: 70vh;
-    margin-bottom: 30vh;
+
+    @media (min-width: $bp-desktop) {
+        min-height: 70vh;
+        margin-bottom: 30vh;
+    }
 }
 
 .about {
@@ -71,6 +74,7 @@ section {
         background-size: cover;
         background-repeat: no-repeat;
         background-position-y: center;
+        margin: 20px;
     }
 
     &__subtitle {

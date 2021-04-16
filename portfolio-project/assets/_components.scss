@@ -3,6 +3,7 @@
 .landing-page {
 
     &__title {
+        font-weight: 800;
         font-size: 100px;
         width: 100%;
         text-align: center;
@@ -10,40 +11,36 @@
         margin-bottom: 20px;
 
         @media (min-width: $bp-tablet) {
-            width: 70%;
+            font-size: 120px;
+            line-height: 140px;
         }
 
-        /* @media (min-width: $layout-breakpoint-laptop) {
-            font-size: 115px;
-        }
-
-        @media (min-width: $layout-breakpoint-desktop) {
-            font-weight: 800;
-            font-size: 115px;
-            width: 100%;
+        @media (min-width: $bp-desktop) {
+            font-size: 140px;
+            line-height: 160px;
             align-items: center;
             text-align: center;
             margin-bottom: 0;
-        }*/
+        }
     }
 
     &__subtitle {
-        font-size: 22px;
+        font-style: normal;
+        font-weight: normal;
+        align-items: center;
         text-align: center;
+        font-size: 30px;
         width: 75%;
-        /*
-        @media (min-width: $layout-breakpoint-tablet) {
+
+        @media (min-width: $bp-tablet) {
             margin: 20px;
+
         }
 
-        @media (min-width: $layout-breakpoint-desktop) {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 30px;
-            align-items: center;
-            text-align: center;
+        @media (min-width: $bp-desktop) {
             width: 100%;
-        }*/
+            font-size: 40px;
+        }
     }
 
     &__chevron-down {
@@ -64,6 +61,10 @@
             z-index: 10;
         }
     }
+
+    @media (min-width: $bp-tablet) {
+        min-height: 80vh;
+    }
 }
 
 .about {
@@ -75,9 +76,13 @@
 
     &__description {
         text-align: center;
-        padding: 20px;
-        font-size: 26px;
+        font-size: 24px;
         width: 70%;
+        line-height: 34px;
+
+        @media (min-width: $bp-desktop) {
+            width: 50%;
+        }
     }
 
     & p {
@@ -123,7 +128,6 @@
         }
     }
 }
-
 
 /* Animations */
 

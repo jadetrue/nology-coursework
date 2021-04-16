@@ -22,46 +22,46 @@ a {
 }
 
 .landing-page__title {
+  font-weight: 800;
   font-size: 100px;
   width: 100%;
   text-align: center;
   line-height: 90px;
   margin-bottom: 20px;
-  /* @media (min-width: $layout-breakpoint-laptop) {
-      font-size: 115px;
-  }
-
-  @media (min-width: $layout-breakpoint-desktop) {
-      font-weight: 800;
-      font-size: 115px;
-      width: 100%;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 0;
-  }*/
 }
 @media (min-width: 768px) {
   .landing-page__title {
-    width: 70%;
+    font-size: 120px;
+    line-height: 140px;
+  }
+}
+@media (min-width: 1140px) {
+  .landing-page__title {
+    font-size: 140px;
+    line-height: 160px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
   }
 }
 .landing-page__subtitle {
-  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  align-items: center;
   text-align: center;
+  font-size: 30px;
   width: 75%;
-  /*
-  @media (min-width: $layout-breakpoint-tablet) {
-      margin: 20px;
+}
+@media (min-width: 768px) {
+  .landing-page__subtitle {
+    margin: 20px;
   }
-
-  @media (min-width: $layout-breakpoint-desktop) {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 30px;
-      align-items: center;
-      text-align: center;
-      width: 100%;
-  }*/
+}
+@media (min-width: 1140px) {
+  .landing-page__subtitle {
+    width: 100%;
+    font-size: 40px;
+  }
 }
 .landing-page__chevron-down {
   display: none;
@@ -82,6 +82,11 @@ a {
     z-index: 10;
   }
 }
+@media (min-width: 768px) {
+  .landing-page {
+    min-height: 80vh;
+  }
+}
 
 .about__title {
   font-weight: 800;
@@ -89,9 +94,14 @@ a {
 }
 .about__description {
   text-align: center;
-  padding: 20px;
-  font-size: 26px;
+  font-size: 24px;
   width: 70%;
+  line-height: 34px;
+}
+@media (min-width: 1140px) {
+  .about__description {
+    width: 50%;
+  }
 }
 .about p {
   margin-bottom: 30px;
@@ -157,7 +167,7 @@ a {
   }
 }
 section {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,9 +218,11 @@ section {
   }
 }
 
-.landing-page {
-  min-height: 70vh;
-  margin-bottom: 30vh;
+@media (min-width: 1140px) {
+  .landing-page {
+    min-height: 70vh;
+    margin-bottom: 30vh;
+  }
 }
 
 .about__image {
@@ -222,6 +234,7 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
+  margin: 20px;
 }
 .about__subtitle {
   padding: 20px;
