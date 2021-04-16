@@ -88,23 +88,54 @@ a {
   }
 }
 
-.about__title {
+.about__title,
+.projects__title {
   font-weight: 800;
-  font-size: 90px;
+  font-size: 65px;
+  text-transform: uppercase;
 }
-.about__description {
+@media (min-width: 1140px) {
+  .about__title,
+.projects__title {
+    font-size: 90px;
+  }
+}
+.about__description,
+.projects__description {
   text-align: center;
   font-size: 24px;
   width: 70%;
   line-height: 34px;
 }
 @media (min-width: 1140px) {
-  .about__description {
+  .about__description,
+.projects__description {
     width: 50%;
   }
 }
-.about p {
+.about p,
+.projects p {
   margin-bottom: 30px;
+}
+.about__wrapper,
+.projects__wrapper {
+  display: flex;
+}
+.about__container,
+.projects__container {
+  background-color: #c4c4c4;
+  border: 10px solid #CAF0F8;
+  border-radius: 50%;
+  height: 196px;
+  width: 196px;
+}
+.about__prev, .about__next,
+.projects__prev,
+.projects__next {
+  border-radius: 50%;
+  border: 5px solid #CAF0F8;
+  width: 41.6px;
+  height: 41.6px;
 }
 
 .social-icons {

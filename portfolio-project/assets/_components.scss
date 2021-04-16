@@ -67,11 +67,17 @@
     }
 }
 
-.about {
+.about,
+.projects {
 
     &__title {
         font-weight: 800;
-        font-size: 90px;
+        font-size: 65px;
+        text-transform: uppercase;
+
+        @media (min-width: $bp-desktop) {
+            font-size: 90px;
+        }
     }
 
     &__description {
@@ -87,6 +93,26 @@
 
     & p {
         margin-bottom: 30px;
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__container {
+        background-color: #c4c4c4;
+        border: 10px solid $secondary-color;
+        border-radius: 50%;
+        height: 196px;
+        width: 196px;
+    }
+
+    &__prev,
+    &__next {
+        border-radius: 50%;
+        border: 5px solid $secondary-color;
+        width: 41.6px;
+        height: 41.6px;
     }
 }
 
