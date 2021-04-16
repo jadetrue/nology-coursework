@@ -16,17 +16,14 @@ section {
     text-transform: uppercase;
     font-weight: 400;
     font-size: 30px;
-
-    @media (max-width: $layout-breakpoint-tablet) {
-        margin-top: 4vh;
-    }
+    margin-top: 4vh;
 
     &__item-wrapper {
         display: flex;
         justify-content: space-evenly;
         list-style: none;
 
-        @media (max-width: $layout-breakpoint-tablet) {
+        @media (max-width: $bp-tablet) {
             display: none;
         }
     }
@@ -53,7 +50,7 @@ section {
     height: 5px;
     margin: 10px auto;
 
-    @media (min-width: $layout-breakpoint-desktop) {
+    @media (min-width: $bp-tablet) {
         display: none;
     }
 }
@@ -82,19 +79,26 @@ section {
     }
 }
 
-
 .social-icons {
     width: 100%;
     position: absolute;
     text-align: center;
     left: 0;
-    bottom: 20vh;
+    bottom: 4vh;
 
-    @media (min-width: $layout-breakpoint-desktop) {
+
+    @media (min-width: $bp-tablet) {
+        position: fixed;
+        width: 172px;
+        height: 77px;
+        left: 75%;
+    }
+
+    @media (min-width: $bp-desktop) {
         position: fixed;
         width: 172px;
         height: 77px;
         left: 85%;
-        bottom: 4vh;
     }
+
 }

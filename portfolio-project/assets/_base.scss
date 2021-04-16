@@ -5,27 +5,8 @@
 $primary-color: #03045E;
 $secondary-color: #CAF0F8;
 
-/* 
-
-320px — 480px: Mobile devices
-481px — 768px: iPads, Tablets
-769px — 1024px: Small screens, laptops
-1025px — 1200px: Desktops, large screens
-1201px and more —  Extra large screens, TV
-
-*/
-
-$layout-breakpoint-desktop: 769px;
-
-$layout-breakpoint-laptop: 1024px;
-
-$layout-breakpoint-tablet: 768px;
-
-$layout-breakpoint-small: 591px;
-
-$layout-breakpoint-mobile: 425px;
-
-
+$bp-tablet: 768px;
+$bp-desktop: 1140px;
 
 * {
     padding: 0;

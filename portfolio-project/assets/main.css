@@ -1,14 +1,4 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,800;1,300&display=swap");
-/* 
-
-320px — 480px: Mobile devices
-481px — 768px: iPads, Tablets
-769px — 1024px: Small screens, laptops
-1025px — 1200px: Desktops, large screens
-1201px and more —  Extra large screens, TV
-
-*/
 * {
   padding: 0;
   margin: 0;
@@ -32,55 +22,65 @@ a {
 }
 
 .landing-page__title {
-  font-size: 130px;
+  font-size: 100px;
   width: 100%;
   text-align: center;
-  line-height: 117px;
-  margin: 10%;
-}
-@media (min-width: 425px) {
-  .landing-page__title {
-    width: 75%;
+  line-height: 90px;
+  margin-bottom: 20px;
+  /* @media (min-width: $layout-breakpoint-laptop) {
+      font-size: 115px;
   }
+
+  @media (min-width: $layout-breakpoint-desktop) {
+      font-weight: 800;
+      font-size: 115px;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 0;
+  }*/
 }
-@media (min-width: 591px) {
+@media (min-width: 768px) {
   .landing-page__title {
-    width: 59%;
-  }
-}
-@media (min-width: 1024px) {
-  .landing-page__title {
-    font-size: 115px;
-  }
-}
-@media (min-width: 769px) {
-  .landing-page__title {
-    font-weight: 800;
-    font-size: 115px;
-    width: 100%;
-    align-items: center;
-    text-align: center;
+    width: 70%;
   }
 }
 .landing-page__subtitle {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 35px;
-  align-items: center;
+  font-size: 22px;
   text-align: center;
+  width: 75%;
+  /*
+  @media (min-width: $layout-breakpoint-tablet) {
+      margin: 20px;
+  }
+
+  @media (min-width: $layout-breakpoint-desktop) {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+  }*/
 }
 .landing-page__chevron-down {
-  font-size: 60px;
-  position: absolute;
-  background: transparent;
-  bottom: 4vh;
-  left: 0;
-  right: 0;
-  width: fit-content;
-  margin: 0 auto;
-  animation: slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out infinite;
-  opacity: 0;
-  z-index: 10;
+  display: none;
+}
+@media (min-width: 768px) {
+  .landing-page__chevron-down {
+    display: block;
+    font-size: 60px;
+    position: absolute;
+    background: transparent;
+    bottom: 4vh;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: 0 auto;
+    animation: slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out infinite;
+    opacity: 0;
+    z-index: 10;
+  }
 }
 
 .about__title {
@@ -100,23 +100,31 @@ a {
 .social-icons {
   font-size: 60px;
 }
-@media (min-width: 769px) {
+@media (min-width: 1140px) {
   .social-icons__at {
     transition: transform 0.7s ease-in-out;
   }
 }
-@media (min-width: 769px) {
+.social-icons__git-hub {
+  margin-right: 20px;
+}
+@media (min-width: 768px) {
+  .social-icons__git-hub {
+    margin-right: 0;
+  }
+}
+@media (min-width: 1140px) {
   .social-icons__git-hub {
     transition: transform 0.7s ease-in-out;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 1140px) {
   .social-icons__at:hover {
     opacity: 0.5;
     transform: rotate(360deg);
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 1140px) {
   .social-icons__git-hub:hover {
     opacity: 0.5;
     transform: rotate(360deg);
@@ -162,11 +170,7 @@ section {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 30px;
-}
-@media (max-width: 768px) {
-  .nav {
-    margin-top: 4vh;
-  }
+  margin-top: 4vh;
 }
 .nav__item-wrapper {
   display: flex;
@@ -198,7 +202,7 @@ section {
   height: 5px;
   margin: 10px auto;
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .mobile-menu {
     display: none;
   }
@@ -229,14 +233,21 @@ section {
   position: absolute;
   text-align: center;
   left: 0;
-  bottom: 20vh;
+  bottom: 4vh;
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
+  .social-icons {
+    position: fixed;
+    width: 172px;
+    height: 77px;
+    left: 75%;
+  }
+}
+@media (min-width: 1140px) {
   .social-icons {
     position: fixed;
     width: 172px;
     height: 77px;
     left: 85%;
-    bottom: 4vh;
   }
 }
