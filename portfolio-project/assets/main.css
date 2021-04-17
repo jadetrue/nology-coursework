@@ -89,19 +89,22 @@ a {
 }
 
 .about__title,
-.projects__title {
+.projects__title,
+.contact__title {
   font-weight: 800;
   font-size: 65px;
   text-transform: uppercase;
 }
 @media (min-width: 1140px) {
   .about__title,
-.projects__title {
+.projects__title,
+.contact__title {
     font-size: 90px;
   }
 }
 .about__description,
-.projects__description {
+.projects__description,
+.contact__description {
   text-align: center;
   font-size: 24px;
   width: 70%;
@@ -109,20 +112,24 @@ a {
 }
 @media (min-width: 1140px) {
   .about__description,
-.projects__description {
+.projects__description,
+.contact__description {
     width: 50%;
   }
 }
 .about p,
-.projects p {
+.projects p,
+.contact p {
   margin-bottom: 30px;
 }
 .about__wrapper,
-.projects__wrapper {
+.projects__wrapper,
+.contact__wrapper {
   display: flex;
 }
 .about__container,
-.projects__container {
+.projects__container,
+.contact__container {
   background-color: #c4c4c4;
   border: 10px solid #CAF0F8;
   border-radius: 50%;
@@ -131,7 +138,9 @@ a {
 }
 .about__prev, .about__next,
 .projects__prev,
-.projects__next {
+.projects__next,
+.contact__prev,
+.contact__next {
   border-radius: 50%;
   border: 5px solid #CAF0F8;
   width: 41.6px;
