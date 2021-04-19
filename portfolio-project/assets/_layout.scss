@@ -88,7 +88,7 @@ section {
     position: absolute;
     text-align: center;
     left: 0;
-    bottom: 4vh;
+    background-color: transparent;
 
 
     @media (min-width: $bp-tablet) {
@@ -96,6 +96,7 @@ section {
         width: 172px;
         height: 77px;
         left: 75%;
+        bottom: 4vh;
     }
 
     @media (min-width: $bp-desktop) {

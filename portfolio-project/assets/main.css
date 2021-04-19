@@ -5,11 +5,11 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   background-color: #03045E;
-  color: #CAF0F8;
+  color: #caf0f8;
 }
 
 ::selection {
-  background-color: #CAF0F8;
+  background-color: #caf0f8;
   color: #03045E;
 }
 
@@ -126,12 +126,13 @@ a {
 .projects__wrapper,
 .contact__wrapper {
   display: flex;
+  margin: 40px 0 40px 0;
 }
 .about__container,
 .projects__container,
 .contact__container {
   background-color: #c4c4c4;
-  border: 10px solid #CAF0F8;
+  border: 10px solid #caf0f8;
   border-radius: 50%;
   height: 196px;
   width: 196px;
@@ -142,9 +143,29 @@ a {
 .contact__prev,
 .contact__next {
   border-radius: 50%;
-  border: 5px solid #CAF0F8;
+  border: 5px solid #caf0f8;
   width: 41.6px;
   height: 41.6px;
+  margin-top: 30%;
+  margin: 25% 10px 0px 10px;
+}
+.about__subtitle,
+.projects__subtitle,
+.contact__subtitle {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.about__links,
+.projects__links,
+.contact__links {
+  font-size: 30px;
+}
+
+.fa-code,
+.fa-code,
+.fa-info {
+  margin: 20px;
 }
 
 .social-icons {
@@ -247,7 +268,7 @@ section {
 
 .mobile-menu {
   display: block;
-  background-color: #CAF0F8;
+  background-color: #caf0f8;
   width: 75px;
   height: 5px;
   margin: 10px auto;
@@ -286,7 +307,7 @@ section {
   position: absolute;
   text-align: center;
   left: 0;
-  bottom: 4vh;
+  background-color: transparent;
 }
 @media (min-width: 768px) {
   .social-icons {
@@ -294,6 +315,7 @@ section {
     width: 172px;
     height: 77px;
     left: 75%;
+    bottom: 4vh;
   }
 }
 @media (min-width: 1140px) {

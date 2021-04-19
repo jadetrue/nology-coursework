@@ -98,6 +98,7 @@
 
     &__wrapper {
         display: flex;
+        margin: 40px 0 40px 0;
     }
 
     &__container {
@@ -114,7 +115,25 @@
         border: 5px solid $secondary-color;
         width: 41.6px;
         height: 41.6px;
+        margin-top: 30%;
+        margin: 25% 10px 0px 10px;
     }
+
+    &__subtitle {
+        text-transform: uppercase;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    &__links {
+        font-size: 30px;
+    }
+}
+
+.fa-code,
+.fa-code,
+.fa-info {
+    margin: 20px
 }
 
 .social-icons {
