@@ -101,7 +101,8 @@ section {
         height: 100px !important;
     }
 
-    & input {
+    & input,
+    textarea {
         background-color: #caf0f8;
         opacity: 50%;
         height: 50px;
@@ -111,6 +112,7 @@ section {
         color: $primary-color;
         font-size: 24px;
         font-weight: bold;
+        text-align: center;
     }
 
     & button {
