@@ -21,6 +21,11 @@ a {
   text-decoration: none;
 }
 
+input,
+button {
+  border: none;
+}
+
 .landing-page__title {
   font-weight: 800;
   font-size: 100px;
@@ -302,6 +307,43 @@ section {
   font-size: 40px;
 }
 
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+.contact label {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.contact__input--larger {
+  height: 100px !important;
+}
+.contact input {
+  background-color: #caf0f8;
+  opacity: 50%;
+  height: 50px;
+  border-radius: 25px;
+  margin-bottom: 40px;
+  padding: 20px;
+  color: #03045E;
+  font-size: 24px;
+  font-weight: bold;
+}
+.contact button {
+  font-size: 24px;
+  text-transform: lowercase;
+  background-color: #caf0f8;
+  color: #03045E;
+  font-weight: bold;
+  width: 50%;
+  margin: auto;
+  border-radius: 26px;
+  padding: 10px;
+}
+
 .social-icons {
   width: 100%;
   position: absolute;
@@ -325,4 +367,8 @@ section {
     height: 77px;
     left: 85%;
   }
+}
+
+footer p {
+  text-align: center;
 }

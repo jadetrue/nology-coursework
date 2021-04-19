@@ -83,6 +83,49 @@ section {
     }
 }
 
+.contact {
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    & label {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    &__input--larger {
+        height: 100px !important;
+    }
+
+    & input {
+        background-color: #caf0f8;
+        opacity: 50%;
+        height: 50px;
+        border-radius: 25px;
+        margin-bottom: 40px;
+        padding: 20px;
+        color: $primary-color;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    & button {
+        font-size: 24px;
+        text-transform: lowercase;
+        background-color: $secondary-color;
+        color: $primary-color;
+        font-weight: bold;
+        width: 50%;
+        margin: auto;
+        border-radius: 26px;
+        padding: 10px;
+    }
+}
+
 .social-icons {
     width: 100%;
     position: absolute;
@@ -106,4 +149,10 @@ section {
         left: 85%;
     }
 
+}
+
+footer {
+    & p {
+        text-align: center;
+    }
 }
