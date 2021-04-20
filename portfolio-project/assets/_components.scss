@@ -1,8 +1,15 @@
 // Anything reusable goes in here.
 
-.landing-page {
+.title {
+    font-weight: 800;
+    font-size: 65px;
+    text-transform: uppercase;
 
-    &__title {
+    @media (min-width: $bp-desktop) {
+        font-size: 90px;
+    }
+
+    &--large {
         font-weight: 800;
         font-size: 100px;
         width: 100%;
@@ -23,8 +30,16 @@
             margin-bottom: 0;
         }
     }
+}
 
-    &__subtitle {
+.subtitle {
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 40px;
+
+    &--large {
         font-style: normal;
         font-weight: normal;
         align-items: center;
@@ -42,136 +57,69 @@
             font-size: 40px;
         }
     }
+}
 
-    &__chevron-down {
-        display: none;
+.label {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
 
-        @media (min-width: $bp-tablet) {
-            display: block;
-            font-size: 60px;
-            position: absolute;
-            background: transparent;
-            bottom: 4vh;
-            left: 0;
-            right: 0;
-            width: fit-content;
-            margin: 0 auto;
-            animation: slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out infinite;
-            opacity: 0;
-            z-index: 10;
-        }
+.input {
+    background-color: #caf0f8;
+    opacity: 50%;
+    height: 50px;
+    border-radius: 25px;
+    margin-bottom: 40px;
+    padding: 20px;
+    color: $primary-color;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+
+    &--larger {
+        height: 100px !important;
     }
+}
+
+.button {
+    font-size: 24px;
+    text-transform: lowercase;
+    background-color: $secondary-color;
+    color: $primary-color;
+    font-weight: bold;
+    width: 50%;
+    margin: auto;
+    border-radius: 26px;
+    padding: 10px;
+}
+
+.description {
+    text-align: center;
+    font-size: 24px;
+    width: 70%;
+    line-height: 34px;
+
+    @media (min-width: $bp-desktop) {
+        width: 50%;
+    }
+}
+
+.chevron-down {
+    display: none;
 
     @media (min-width: $bp-tablet) {
-        min-height: 80vh;
-    }
-}
-
-.about,
-.projects,
-.contact {
-
-    &__title {
-        font-weight: 800;
-        font-size: 65px;
-        text-transform: uppercase;
-
-        @media (min-width: $bp-desktop) {
-            font-size: 90px;
-        }
-    }
-
-    &__description {
-        text-align: center;
-        font-size: 24px;
-        width: 70%;
-        line-height: 34px;
-
-        @media (min-width: $bp-desktop) {
-            width: 50%;
-        }
-    }
-
-    & p {
-        margin-bottom: 30px;
-    }
-
-    &__wrapper {
-        display: flex;
-        margin: 40px 0 40px 0;
-    }
-
-    &__container {
-        background-color: #c4c4c4;
-        border: 10px solid $secondary-color;
-        border-radius: 50%;
-        height: 196px;
-        width: 196px;
-    }
-
-    &__prev,
-    &__next {
-        border-radius: 50%;
-        border: 5px solid $secondary-color;
-        width: 41.6px;
-        height: 41.6px;
-        margin-top: 30%;
-        margin: 25% 10px 0px 10px;
-    }
-
-    &__subtitle {
-        text-transform: uppercase;
-        font-size: 30px;
-        margin-bottom: 20px;
-    }
-
-    &__links {
-        font-size: 30px;
-    }
-}
-
-.fa-code,
-.fa-code,
-.fa-info {
-    margin: 20px
-}
-
-.social-icons {
-    font-size: 60px;
-
-    &__at {
-
-        @media (min-width: $bp-desktop) {
-            transition: transform .7s ease-in-out;
-        }
-    }
-
-    &__git-hub {
-        margin-right: 20px;
-
-        @media (min-width: $bp-tablet) {
-            margin-right: 0;
-        }
-
-        @media (min-width: $bp-desktop) {
-            transition: transform .7s ease-in-out;
-        }
-    }
-
-    &__at:hover {
-
-        @media (min-width: $bp-desktop) {
-            opacity: .5;
-            transform: rotate(360deg);
-        }
-    }
-
-    &__git-hub:hover {
-
-        @media (min-width: $bp-desktop) {
-            opacity: .5;
-            transform: rotate(360deg);
-        }
+        display: block;
+        font-size: 60px;
+        position: absolute;
+        background: transparent;
+        bottom: 4vh;
+        left: 0;
+        right: 0;
+        width: fit-content;
+        margin: 0 auto;
+        animation: slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out infinite;
+        opacity: 0;
+        z-index: 10;
     }
 }
 
