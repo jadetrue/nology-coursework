@@ -68,16 +68,15 @@ textarea {
 
 .subtitle {
   text-transform: uppercase;
-  font-size: 30px;
+  text-align: center;
+  font-size: 40px;
   margin-bottom: 20px;
   padding: 20px;
-  font-size: 40px;
 }
 .subtitle--large {
   font-style: normal;
   font-weight: normal;
   align-items: center;
-  text-align: center;
   font-size: 30px;
   width: 75%;
 }
@@ -192,6 +191,10 @@ section {
   padding: 20px;
 }
 
+.gutter {
+  margin-bottom: 20px;
+}
+
 @media (min-width: 768px) {
   .landing-page {
     min-height: 80vh;
@@ -284,6 +287,7 @@ section {
 }
 .socials__icon--github {
   margin-right: 20px;
+  background-color: transparent;
 }
 @media (min-width: 768px) {
   .socials__icon--github {
@@ -301,6 +305,9 @@ section {
     transform: rotate(360deg);
   }
 }
+.socials__icon--at {
+  background-color: transparent;
+}
 @media (min-width: 1140px) {
   .socials__icon--at {
     transition: transform 0.7s ease-in-out;
@@ -313,30 +320,20 @@ section {
   }
 }
 
-/*.social-icons {
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    left: 0;
-    background-color: transparent;
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+@media (min-width: 1140px) {
+  .links {
+    width: 30%;
+  }
+}
+.links__icon {
+  font-size: 30px;
+}
 
-
-    @media (min-width: $bp-tablet) {
-        position: fixed;
-        width: 172px;
-        height: 77px;
-        left: 75%;
-        bottom: 4vh;
-    }
-
-    @media (min-width: $bp-desktop) {
-        position: fixed;
-        width: 172px;
-        height: 77px;
-        left: 85%;
-    }
-
-}*/
 .form {
   display: flex;
   flex-direction: column;

@@ -11,6 +11,10 @@ section {
     padding: 20px;
 }
 
+.gutter {
+    margin-bottom: 20px;
+}
+
 .landing-page {
 
     @media (min-width: $bp-tablet) {
@@ -110,6 +114,7 @@ section {
 
         &--github {
             margin-right: 20px;
+            background-color: transparent;
 
             @media (min-width: $bp-tablet) {
                 margin-right: 0;
@@ -128,6 +133,8 @@ section {
         }
 
         &--at {
+            background-color: transparent;
+
             @media (min-width: $bp-desktop) {
                 transition: transform .7s ease-in-out;
             }
@@ -143,30 +150,19 @@ section {
 }
 
 
-/*.social-icons {
+.links {
+    display: flex;
+    justify-content: space-evenly;
     width: 100%;
-    position: absolute;
-    text-align: center;
-    left: 0;
-    background-color: transparent;
-
-
-    @media (min-width: $bp-tablet) {
-        position: fixed;
-        width: 172px;
-        height: 77px;
-        left: 75%;
-        bottom: 4vh;
-    }
 
     @media (min-width: $bp-desktop) {
-        position: fixed;
-        width: 172px;
-        height: 77px;
-        left: 85%;
+        width: 30%;
     }
 
-}*/
+    &__icon {
+        font-size: 30px;
+    }
+}
 
 .form {
     display: flex;
@@ -197,5 +193,4 @@ section {
         margin-top: 30%;
         margin: 25% 10px 0px 10px;
     }
-
 }
