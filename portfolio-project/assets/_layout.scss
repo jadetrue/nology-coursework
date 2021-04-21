@@ -38,6 +38,7 @@ section {
         display: flex;
         justify-content: space-evenly;
         list-style: none;
+        z-index: 1;
 
         @media (max-width: $bp-tablet) {
             display: none;
@@ -98,6 +99,7 @@ section {
     text-align: center;
     left: 0;
     background-color: transparent;
+    z-index: 1;
 
     @media (min-width: $bp-tablet) {
         position: fixed;
@@ -186,6 +188,10 @@ section {
     justify-content: center;
     margin: 40px 0 40px 0;
     width: 100%;
+
+    @media (min-width: $bp-desktop) {
+        width: unset;
+    }
 
     & .container {
         background-color: #c4c4c4;
