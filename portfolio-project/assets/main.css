@@ -34,7 +34,7 @@ textarea {
 
 .title {
   font-weight: 800;
-  font-size: 65px;
+  font-size: 50px;
   text-transform: uppercase;
 }
 @media (min-width: 1140px) {
@@ -45,7 +45,7 @@ textarea {
 .title--large {
   font-weight: 800;
   font-size: 100px;
-  width: 100%;
+  width: 320px;
   text-align: center;
   line-height: 90px;
   margin-bottom: 20px;
@@ -58,6 +58,7 @@ textarea {
 }
 @media (min-width: 1140px) {
   .title--large {
+    width: 100%;
     font-size: 140px;
     line-height: 160px;
     align-items: center;
@@ -69,7 +70,7 @@ textarea {
 .subtitle {
   text-transform: uppercase;
   text-align: center;
-  font-size: 40px;
+  font-size: 25px;
   margin-bottom: 20px;
   padding: 20px;
 }
@@ -77,12 +78,12 @@ textarea {
   font-style: normal;
   font-weight: normal;
   align-items: center;
-  font-size: 30px;
-  width: 75%;
+  font-size: 20px;
 }
 @media (min-width: 768px) {
   .subtitle--large {
     margin: 20px;
+    font-size: 30px;
   }
 }
 @media (min-width: 1140px) {
@@ -128,7 +129,6 @@ textarea {
 .description {
   text-align: center;
   font-size: 24px;
-  width: 70%;
   line-height: 34px;
 }
 @media (min-width: 1140px) {
@@ -138,11 +138,11 @@ textarea {
 }
 
 .chevron-down {
-  display: none;
+  display: none !important;
 }
 @media (min-width: 768px) {
   .chevron-down {
-    display: block;
+    display: block !important;
     font-size: 60px;
     position: absolute;
     background: transparent;
@@ -155,6 +155,40 @@ textarea {
     opacity: 0;
     z-index: 10;
   }
+}
+
+.wave {
+  display: block;
+  background-color: #caf0f8;
+}
+
+.blob {
+  display: block;
+  width: 50%;
+  opacity: 0.5;
+  position: absolute;
+  background-color: transparent;
+}
+.blob__variation-one {
+  width: 170%;
+  top: -15vh;
+  right: 33vw;
+  z-index: 1;
+}
+.blob__variation-two {
+  width: 100%;
+  top: 15vh;
+  right: 65vw;
+}
+.blob__variation-three {
+  width: 100%;
+  top: 90vh;
+  z-index: 1;
+}
+.blob__variation-four {
+  width: 170%;
+  top: 75vh;
+  left: 40vw;
 }
 
 /* Animations */
@@ -236,6 +270,9 @@ section {
   margin-top: 20px;
   margin-bottom: 0px;
 }
+.navigation .mobile-navigation {
+  z-index: 2;
+}
 .navigation .mobile-menu {
   display: block;
   background-color: #caf0f8;
@@ -263,7 +300,6 @@ section {
 
 .socials {
   font-size: 60px;
-  margin: 20px;
   width: 100%;
   position: absolute;
   text-align: center;
@@ -283,6 +319,14 @@ section {
   .socials {
     left: 85%;
     transition: transform 0.7s ease-in-out;
+  }
+}
+.socials a {
+  color: #03045E;
+}
+@media (min-width: 1140px) {
+  .socials a {
+    color: #caf0f8;
   }
 }
 .socials__icon--github {
@@ -344,20 +388,22 @@ section {
 
 .projects__list {
   display: flex;
+  justify-content: center;
   margin: 40px 0 40px 0;
+  width: 100%;
 }
 .projects__list .container {
   background-color: #c4c4c4;
   border: 10px solid #caf0f8;
   border-radius: 50%;
-  height: 196px;
-  width: 196px;
+  height: 176px;
+  width: 176px;
 }
 .projects__list .prev, .projects__list .next {
   border-radius: 50%;
   border: 5px solid #caf0f8;
-  width: 41.6px;
-  height: 41.6px;
+  width: 31.6px;
+  height: 31.6px;
   margin-top: 30%;
   margin: 25% 10px 0px 10px;
 }

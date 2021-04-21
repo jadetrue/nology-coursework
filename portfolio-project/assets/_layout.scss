@@ -58,6 +58,10 @@ section {
         }
     }
 
+    & .mobile-navigation {
+        z-index: 2;
+    }
+
     & .mobile-menu {
         display: block;
         background-color: $secondary-color;
@@ -89,7 +93,6 @@ section {
 
 .socials {
     font-size: 60px;
-    margin: 20px;
     width: 100%;
     position: absolute;
     text-align: center;
@@ -107,7 +110,14 @@ section {
     @media (min-width: $bp-desktop) {
         left: 85%;
         transition: transform .7s ease-in-out;
+    }
 
+    & a {
+        color: $primary-color;
+
+        @media (min-width: $bp-desktop) {
+            color: $secondary-color;
+        }
     }
 
     &__icon {
@@ -149,7 +159,6 @@ section {
     }
 }
 
-
 .links {
     display: flex;
     justify-content: space-evenly;
@@ -174,22 +183,24 @@ section {
 
 .projects__list {
     display: flex;
+    justify-content: center;
     margin: 40px 0 40px 0;
+    width: 100%;
 
     & .container {
         background-color: #c4c4c4;
         border: 10px solid $secondary-color;
         border-radius: 50%;
-        height: 196px;
-        width: 196px;
+        height: 176px;
+        width: 176px;
     }
 
     & .prev,
     & .next {
         border-radius: 50%;
         border: 5px solid $secondary-color;
-        width: 41.6px;
-        height: 41.6px;
+        width: 31.6px;
+        height: 31.6px;
         margin-top: 30%;
         margin: 25% 10px 0px 10px;
     }

@@ -2,7 +2,7 @@
 
 .title {
     font-weight: 800;
-    font-size: 65px;
+    font-size: 50px;
     text-transform: uppercase;
 
     @media (min-width: $bp-desktop) {
@@ -12,7 +12,7 @@
     &--large {
         font-weight: 800;
         font-size: 100px;
-        width: 100%;
+        width: 320px;
         text-align: center;
         line-height: 90px;
         margin-bottom: 20px;
@@ -23,6 +23,7 @@
         }
 
         @media (min-width: $bp-desktop) {
+            width: 100%;
             font-size: 140px;
             line-height: 160px;
             align-items: center;
@@ -35,7 +36,7 @@
 .subtitle {
     text-transform: uppercase;
     text-align: center;
-    font-size: 40px;
+    font-size: 25px;
     margin-bottom: 20px;
     padding: 20px;
 
@@ -43,12 +44,11 @@
         font-style: normal;
         font-weight: normal;
         align-items: center;
-        font-size: 30px;
-        width: 75%;
+        font-size: 20px;
 
         @media (min-width: $bp-tablet) {
             margin: 20px;
-
+            font-size: 30px;
         }
 
         @media (min-width: $bp-desktop) {
@@ -95,7 +95,6 @@
 .description {
     text-align: center;
     font-size: 24px;
-    width: 70%;
     line-height: 34px;
 
     @media (min-width: $bp-desktop) {
@@ -104,10 +103,10 @@
 }
 
 .chevron-down {
-    display: none;
+    display: none !important;
 
     @media (min-width: $bp-tablet) {
-        display: block;
+        display: block !important;
         font-size: 60px;
         position: absolute;
         background: transparent;
@@ -119,6 +118,44 @@
         animation: slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out infinite;
         opacity: 0;
         z-index: 10;
+    }
+}
+
+.wave {
+    display: block;
+    background-color: #caf0f8;
+}
+
+.blob {
+    display: block;
+    width: 50%;
+    opacity: 0.50;
+    position: absolute;
+    background-color: transparent;
+
+    &__variation-one {
+        width: 170%;
+        top: -15vh;
+        right: 33vw;
+        z-index: 1;
+    }
+
+    &__variation-two {
+        width: 100%;
+        top: 15vh;
+        right: 65vw;
+    }
+
+    &__variation-three {
+        width: 100%;
+        top: 90vh;
+        z-index: 1;
+    }
+
+    &__variation-four {
+        width: 170%;
+        top: 75vh;
+        left: 40vw;
     }
 }
 
