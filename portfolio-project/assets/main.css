@@ -148,9 +148,6 @@ textarea:focus {
     cursor: pointer;
     opacity: 0.5;
   }
-  .button a:hover {
-    opacity: 1;
-  }
 }
 
 .description {
@@ -162,6 +159,9 @@ textarea:focus {
   .description {
     width: 50%;
   }
+}
+.description--confirmation {
+  display: none;
 }
 
 .chevron-down {

@@ -114,6 +114,10 @@
     @media (min-width: $bp-desktop) {
         width: 50%;
     }
+
+    &--confirmation {
+        display: none;
+    }
 }
 
 .chevron-down {
