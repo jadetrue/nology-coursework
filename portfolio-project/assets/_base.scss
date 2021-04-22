@@ -39,4 +39,16 @@ button,
 textarea {
     border: none;
     outline: none;
+    resize: none;
+    transition: all 0.30s ease-in-out;
+}
+
+input[type=text]:focus,
+textarea:focus {
+    box-shadow: 0 0 20px $secondary-color;
+    border: 1px solid $primary-color;
+}
+
+::placeholder {
+    font-weight: normal;
 }

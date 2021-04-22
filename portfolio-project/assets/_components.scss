@@ -63,6 +63,7 @@
 }
 
 .label {
+    display: block;
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -78,6 +79,7 @@
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+    width: 100%;
 
     &--larger {
         height: 100px !important;
@@ -94,6 +96,14 @@
     margin: auto;
     border-radius: 26px;
     padding: 10px;
+
+    @media (min-width: $bp-tablet) {
+
+        &:hover {
+            cursor: pointer;
+            opacity: .5;
+        }
+    }
 }
 
 .description {

@@ -84,26 +84,39 @@
             <p class="description">If you’re interested in my work and would like to know more, please fill out
                 the form below and I’ll be in touch. </p>
             <form class="form" autocomplete="off">
-                <label for="name" class="label">Full Name</label>
-                <input 
-                type="text" 
-                name="name" 
-                class="input"
-                autocomplete="new-password">
-                <label for="email" class="label">Email</label>
-                <input 
-                type="text" 
-                name="email" 
-                class="input"
-                autocomplete="new-password">
-                <label for="message" class="label">Message</label>
+                <div>
+                    <label for="name" class="label">Full Name</label>
+                    <input 
+                    type="text" 
+                    name="name" 
+                    class="input"
+                    required="required"
+                    autocomplete="new-password">
+                </div>
+                <div>
+                    <label for="email" class="label">Email</label>
+                    <input 
+                    type="email" 
+                    name="email" 
+                    class="input" 
+                    required="required"
+                    autocomplete="new-password">
+                </div>
+                <label for="message" class="label full-width">Message</label>
                 <textarea 
                 type="text" 
                 name="message" 
-                class="input input--larger"
-                autocomplete="new-password"></textarea>
-                <button class="button">Send</button>
+                class="input input--larger full-width"
+                maxlength="255"
+                autocomplete="new-password"
+                placeholder="Enter your message here"
+                required="required"
+                spellcheck="true"></textarea>
+                <button class="button full-width">Send</button>
             </form>
+
+            
+            
         </section>
     </main>
 

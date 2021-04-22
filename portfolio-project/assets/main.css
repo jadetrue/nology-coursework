@@ -30,6 +30,18 @@ button,
 textarea {
   border: none;
   outline: none;
+  resize: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type=text]:focus,
+textarea:focus {
+  box-shadow: 0 0 20px #caf0f8;
+  border: 1px solid #03045E;
+}
+
+::placeholder {
+  font-weight: normal;
 }
 
 .title {
@@ -98,6 +110,7 @@ textarea {
 }
 
 .label {
+  display: block;
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -113,6 +126,7 @@ textarea {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  width: 100%;
 }
 .input--larger {
   height: 100px !important;
@@ -128,6 +142,15 @@ textarea {
   margin: auto;
   border-radius: 26px;
   padding: 10px;
+}
+@media (min-width: 768px) {
+  .button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  .button a:hover {
+    opacity: 1;
+  }
 }
 
 .description {
@@ -418,6 +441,22 @@ section {
   width: 100%;
   text-align: center;
   padding: 20px;
+}
+@media (min-width: 768px) {
+  .form {
+    width: 80%;
+  }
+}
+@media (min-width: 1140px) {
+  .form {
+    display: grid;
+    width: 45%;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px;
+  }
+  .form .full-width {
+    grid-column: 1/3;
+  }
 }
 
 .projects__list {
