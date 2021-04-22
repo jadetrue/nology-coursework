@@ -35,7 +35,8 @@ textarea {
 }
 
 input[type=text]:focus,
-textarea:focus {
+textarea:focus,
+input[type=email]:focus {
   box-shadow: 0 0 20px #caf0f8;
   border: 1px solid #03045E;
 }
@@ -129,7 +130,7 @@ textarea:focus {
   width: 100%;
 }
 .input--larger {
-  height: 100px !important;
+  height: 20vh !important;
 }
 
 .button {
@@ -477,11 +478,23 @@ section {
   height: 176px;
   width: 176px;
 }
+@media (min-width: 1140px) {
+  .projects__list .container {
+    height: 500px;
+    width: 500px;
+  }
+}
 .projects__list .prev, .projects__list .next {
   border-radius: 50%;
   border: 5px solid #caf0f8;
   width: 31.6px;
   height: 31.6px;
-  margin-top: 30%;
   margin: 25% 10px 0px 10px;
+}
+@media (min-width: 1140px) {
+  .projects__list .prev, .projects__list .next {
+    height: 51.6px;
+    width: 51.6px;
+    margin: 28% 50px 0px 50px;
+  }
 }

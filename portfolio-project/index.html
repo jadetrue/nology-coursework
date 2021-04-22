@@ -83,7 +83,14 @@
             <h1 class="title gutter">Contact</h1>
             <p class="description">If you’re interested in my work and would like to know more, please fill out
                 the form below and I’ll be in touch. </p>
-            <form class="form" autocomplete="off">
+            
+                <form 
+                action=""
+                method="POST"
+                enctype="multipart/form-data"
+                class="form" 
+                autocomplete="off">
+
                 <div>
                     <label for="name" class="label">Full Name</label>
                     <input 
@@ -93,6 +100,7 @@
                     required="required"
                     autocomplete="new-password">
                 </div>
+
                 <div>
                     <label for="email" class="label">Email</label>
                     <input 
@@ -102,6 +110,7 @@
                     required="required"
                     autocomplete="new-password">
                 </div>
+
                 <label for="message" class="label full-width">Message</label>
                 <textarea 
                 type="text" 
@@ -112,8 +121,11 @@
                 placeholder="Enter your message here"
                 required="required"
                 spellcheck="true"></textarea>
+
                 <button class="button full-width">Send</button>
+
             </form>
+
             <div class="description description--confirmation">
                 <p>Thank you for reaching out!</p>
                 <p>Your message was sent. I will be in touch as soon as possible.</p>

@@ -215,6 +215,13 @@ section {
         border-radius: 50%;
         height: 176px;
         width: 176px;
+
+        @media (min-width: $bp-tablet) {}
+
+        @media (min-width: $bp-desktop) {
+            height: 500px;
+            width: 500px;
+        }
     }
 
     & .prev,
@@ -223,7 +230,15 @@ section {
         border: 5px solid $secondary-color;
         width: 31.6px;
         height: 31.6px;
-        margin-top: 30%;
         margin: 25% 10px 0px 10px;
+
+
+        @media (min-width: $bp-tablet) {}
+
+        @media (min-width: $bp-desktop) {
+            height: 51.6px;
+            width: 51.6px;
+            margin: 28% 50px 0px 50px;
+        }
     }
 }
