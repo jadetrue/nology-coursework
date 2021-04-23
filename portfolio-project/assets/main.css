@@ -285,14 +285,18 @@ section {
   margin-bottom: 20px;
 }
 
+.landing-page {
+  overflow: hidden;
+  position: relative;
+}
 @media (min-width: 768px) {
   .landing-page {
-    min-height: 80vh;
+    min-height: 100vh;
   }
 }
 @media (min-width: 1140px) {
   .landing-page {
-    min-height: 70vh;
+    min-height: 100vh;
     margin-bottom: 30vh;
   }
 }
