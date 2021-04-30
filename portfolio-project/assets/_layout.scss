@@ -24,9 +24,8 @@ section {
         min-height: 100vh;
     }
 
-    @media (min-width: $bp-desktop) {
-        min-height: 100vh;
-        margin-bottom: 30vh;
+    &__content {
+        margin-top: -200px;
     }
 }
 
@@ -36,6 +35,9 @@ section {
     font-weight: 400;
     font-size: 30px;
     margin-top: 4vh;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
 
     &__list {
         display: flex;

@@ -4,7 +4,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  background-color: #03045E;
   color: #caf0f8;
 }
 
@@ -43,6 +42,10 @@ input[type=email]:focus {
 
 ::placeholder {
   font-weight: normal;
+}
+
+.bg-primary {
+  background-color: #03045E;
 }
 
 .title {
@@ -294,11 +297,8 @@ section {
     min-height: 100vh;
   }
 }
-@media (min-width: 1140px) {
-  .landing-page {
-    min-height: 100vh;
-    margin-bottom: 30vh;
-  }
+.landing-page__content {
+  margin-top: -200px;
 }
 
 .navigation {
@@ -307,6 +307,9 @@ section {
   font-weight: 400;
   font-size: 30px;
   margin-top: 4vh;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
 }
 .navigation__list {
   display: flex;
