@@ -1,0 +1,33 @@
+{
+  "name": "js-challenges",
+  "version": "1.0.0",
+  "description": "A repo of JavaScript challenges created for use during web development courses at nology",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3"
+  },
+  "scripts": {
+    "test-coverage": "jest ./src/js13/challenge.test.js --watch --coverage",
+    "test": "jest",
+    "test-watch": "jest --watch"
+  },
+  "contributors": [
+    {
+      "name": "Matthew Bickell",
+      "email": "matthew@nology.io"
+    },
+    {
+      "name": "Charlie Richardson",
+      "email": "charlie@nology.io"
+    },
+    {
+      "name": "Andy Evans",
+      "email": "andy@nology.io"
+    }
+  ],
+  "license": "ISC"
+}

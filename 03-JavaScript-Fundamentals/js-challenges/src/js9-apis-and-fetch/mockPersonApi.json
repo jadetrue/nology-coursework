@@ -1,0 +1,58 @@
+[
+  {
+    "id": "001",
+    "name": "Peter",
+    "age": 47,
+    "height": 170,
+    "interests": ["swimming", "reading", "juggling"],
+    "isEmployed": true
+  },
+  {
+    "id": "002",
+    "name": "Georgia",
+    "age": 16,
+    "height": 130,
+    "interests": ["writing", "hiking", "watching TV"],
+    "isEmployed": false
+  },
+  {
+    "id": "003",
+    "name": "Joanna",
+    "age": 78,
+    "height": 140,
+    "interests": ["knitting", "baking", "MMA"],
+    "isEmployed": false
+  },
+  {
+    "id": "004",
+    "name": "Buzz",
+    "age": 32,
+    "height": 190,
+    "interests": ["shooting", "MMA", "writing"],
+    "isEmployed": true
+  },
+  {
+    "id": "005",
+    "name": "Travis",
+    "age": 22,
+    "height": 160,
+    "interests": ["swimming", "watching TV", "knitting"],
+    "isEmployed": true
+  },
+  {
+    "id": "006",
+    "name": "Paula",
+    "age": 27,
+    "height": 160,
+    "interests": ["baking", "hiking", "shooting"],
+    "isEmployed": false
+  },
+  {
+    "id": "007",
+    "name": "J",
+    "age": 50,
+    "height": 150,
+    "interests": ["reading", "juggling", "knitting"],
+    "isEmployed": false
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "interest": "swimming",
+    "costPerAnnum": 800,
+    "sizeOfCommunity": 20000000,
+    "isDoneInGroups": false
+  },
+  {
+    "interest": "reading",
+    "costPerAnnum": 500,
+    "sizeOfCommunity": 30000000,
+    "isDoneInGroups": false
+  },
+  {
+    "interest": "juggling",
+    "costPerAnnum": 100,
+    "sizeOfCommunity": 1000000,
+    "isDoneInGroups": false
+  },
+  {
+    "interest": "writing",
+    "costPerAnnum": 200,
+    "sizeOfCommunity": 15000000,
+    "isDoneInGroups": false
+  },
+  {
+    "interest": "hiking",
+    "costPerAnnum": 1000,
+    "sizeOfCommunity": 25000000,
+    "isDoneInGroups": true
+  },
+  {
+    "interest": "watching TV",
+    "costPerAnnum": 200,
+    "sizeOfCommunity": 450000000,
+    "isDoneInGroups": true
+  },
+  {
+    "interest": "knitting",
+    "costPerAnnum": 400,
+    "sizeOfCommunity": 10000000,
+    "isDoneInGroups": false
+  },
+  {
+    "interest": "baking",
+    "costPerAnnum": 400,
+    "sizeOfCommunity": 20000000,
+    "isDoneInGroups": false
+  },
+  {
+    "interest": "MMA",
+    "costPerAnnum": 1000,
+    "sizeOfCommunity": 20000000,
+    "isDoneInGroups": true
+  },
+  {
+    "interest": "shooting",
+    "costPerAnnum": 10000,
+    "sizeOfCommunity": 5000000,
+    "isDoneInGroups": true
+  }
+]
