@@ -1,0 +1,31 @@
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    border-radius: 20px;
+    gap: 10px;
+}
+
+.output {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.previous-number {
+    font-size: 1.5rem;
+}
+
+.current-number {
+    font-size: 2.5rem;
+}
