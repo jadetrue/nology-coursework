@@ -75,8 +75,18 @@ export const findLengthOfPassword = () => {
 const thing = "I am a thing";
 
 export const findType = () => {
-    // Cant do it
-}
+   const thingType = typeof thing;
+
+   if (thingType === 'string') {
+     return "This is a string";
+   } else if (thingType === 'number') {
+     return "This is a number";
+   } else if (thingType === 'boolean') {
+     return "This is a boolean";
+   } else {
+     return "I don't know what this thing is";
+   }
+};
 
 /**
  * A function to programmatically decide if a name is suitable for a name tag.
@@ -88,7 +98,12 @@ export const findType = () => {
 const nameTagOption = "Timothy";
 
 export const getIsValidOnNameTag = () => {
-  // Write your code here
+  const isCaps = nameTagOption.substring(0,1);
+  const name = nameTagOption.length <= 8 && isCaps === isCaps.toUpperCase();
+  
+  // https://www.w3schools.com/jsref/jsref_substring.asp
+
+  return name;
 };
 
 /* Advanced Challenges */
@@ -102,8 +117,11 @@ export const getIsValidOnNameTag = () => {
 const stringToConvert = "14.45";
 
 export const convertStringToNumber = () => {
-  // Write your code here
+  let number = stringToConvert;
+  return number = parseFloat(stringToConvert, 10);
 };
+
+// https://gomakethings.com/converting-strings-to-numbers-with-vanilla-javascript/
 
 /**
  * A function that uses regex to programmatically test if a string contains uppercase letters.
