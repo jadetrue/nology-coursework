@@ -134,7 +134,9 @@ export const convertStringToNumber = () => {
 const stringWithUppercaseLetters = "I Am A String With Uppercase Letters";
 
 export const getHasUppercaseLetters = () => {
-  // Write your code here
+  const getHasUppercaseLetters = /(\b[A-Z][A-Z]+|\b[A-Z]\b)/g;
+  const hasUpperCaseLetters = getHasUppercaseLetters.test(stringWithUppercaseLetters);
+  return hasUpperCaseLetters;
 };
 
 /* Expert Challenge */
@@ -148,5 +150,6 @@ export const getHasUppercaseLetters = () => {
 const pascalCaseVariableName = "IWantToBeSnakeCase";
 
 export const convertPascalCaseToSnakeCase = () => {
-  // Write your code here
+
+
 };
