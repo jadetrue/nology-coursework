@@ -150,11 +150,9 @@ export const getHasUppercaseLetters = () => {
 const pascalCaseVariableName = "IWantToBeSnakeCase";
 
 export const convertPascalCaseToSnakeCase = () => {
-<<<<<<< Updated upstream
+  const length = pascalCaseVariableName.length();
+  const snakeCase = pascalCaseVariableName.charAt(0)+"";
 
+  return length.snakeCase;
 
-=======
-  const snakeCase = snakeCase(/\W+/g, " ").split(/ |\B(?=[A-Z])/)
-  return pascalCaseVariableName.snakeCase();
->>>>>>> Stashed changes
 };
