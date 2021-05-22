@@ -26,7 +26,7 @@ const stringsToClean = ["  CaBBage  ", "TuRnIp", "  RADish", "CARroT  "];
 const cleanedStrings = "cabbage+turnip+radish+carrot";
 const formattedStringArr = ["T", "e", "S", "t", "S", "t", "R", "i", "N", "g"];
 
-xdescribe("Testing removeFalseValues()", () => {
+describe("Testing removeFalseValues()", () => {
   it("Should return an array", () => {
     expect(Array.isArray(removeFalseValues([true]))).toBe(true);
     expect(Array.isArray(removeFalseValues([false]))).toBe(true);
@@ -49,7 +49,7 @@ xdescribe("Testing removeFalseValues()", () => {
   });
 });
 
-xdescribe("Testing createPercentageList()", () => {
+describe("Testing createPercentageList()", () => {
   it("Should return an array", () => {
     expect(Array.isArray(createPercentageList(toBePercentages))).toBe(true);
   });
@@ -70,7 +70,7 @@ xdescribe("Testing createPercentageList()", () => {
   });
 });
 
-xdescribe("Testing createListOfPoessessions()", () => {
+describe("Testing createListOfPoessessions()", () => {
   it("Should return an array", () => {
     expect(Array.isArray(createListOfPoessessions(possessions, "Matt's"))).toBe(true);
   });
@@ -267,7 +267,7 @@ xdescribe("Testing formatString()", () => {
   });
 });
 
-describe("Testing fizzBuzz()", () => {
+xdescribe("Testing fizzBuzz()", () => {
   const cleanArray = Array(50)
     .fill(0)
     .map((_, index) => index + 1);
