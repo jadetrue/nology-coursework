@@ -79,7 +79,9 @@ export const createListOfPoessessions = (possessionsArr, name) => {
  */
 
 export const convertStringToNumbersArray = (numberString) => {
-  return;
+
+  const arrOfNumbers = numberString.split('+').map((number) => Number(number));
+  return arrOfNumbers;
 };
 
 /**
@@ -91,7 +93,9 @@ export const convertStringToNumbersArray = (numberString) => {
  */
 
 export const createOddEvenArray = (numberString) => {
-  return;
+  const numberArray = convertStringToNumbersArray(numberString);
+  const oddEven = numberArray.map((number) => (number % 2 === 0 ? "even" : "odd"));
+  return oddEven;
 };
 
 /**

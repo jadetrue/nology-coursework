@@ -97,7 +97,7 @@ describe("Testing createListOfPoessessions()", () => {
   });
 });
 
-xdescribe("Testing convertStringToNumbersArray()", () => {
+describe("Testing convertStringToNumbersArray()", () => {
   it("Should return an array", () => {
     expect(Array.isArray(convertStringToNumbersArray(numbersCSV))).toBe(true);
   });
@@ -123,7 +123,7 @@ xdescribe("Testing convertStringToNumbersArray()", () => {
   });
 });
 
-xdescribe("Testing createOddEvenArray()", () => {
+describe("Testing createOddEvenArray()", () => {
   it("Should return an array", () => {
     expect(Array.isArray(createOddEvenArray(numbersCSV))).toBe(true);
   });
