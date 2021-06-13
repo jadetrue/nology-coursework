@@ -149,7 +149,7 @@ describe("Testing createOddEvenArray()", () => {
   });
 });
 
-xdescribe("Testing filterBooksBySearch()", () => {
+describe("Testing filterBooksBySearch()", () => {
   it("Should return an array", () => {
     expect(Array.isArray(filterBooksBySearch(["one thing"], "one thing"))).toBe(true);
   });
