@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins";
+      }
+      * {
+        font-family: "Lato";
+      }
+      body {
+        text-align: center;
+      }
+      input {
+        border: 1px solid lightgray;
+        padding: 5px 10px;
+        margin: 5px;
+      }
+      ul {
+        width: fit-content;
+        margin: 0 auto;
+        text-align: left;
+      }
+      .valid {
+        border: 1px solid green;
+      }
+      .invalid {
+        border: 1px solid red;
+      }
+      #error-message {
+        background: red;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        display: none;
+        width: 200px;
+        margin-top: 5px;
+      }
+      .show {
+        display: block !important;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Welcome/Title -->
+      <section id="welcome">
+        <h1 id="welcome-title">Welcome to Nology Conference!</h1>
+        <p>Amazing talks from amazing people.</p>
+      </section>
+
+      <!-- Register your interest -->
+      <section id="contact">
+        <h3>Register your interest!</h3>
+        <form>
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input class="form-input" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" />
+          </div>
+          <button onclick="handleRegister(event)">Send</button>
+          <div id="error-message">Oops something is wrong! Please see above...</div>
+        </form>
+      </section>
+      <section>
+        <h3>Summary</h3>
+        <ul id="summary-list"></ul>
+      </section>
+    </main>
+
+    <script defer>
+      let welcomeElement = document.getElementById("welcome-title");
+      welcomeElement.innerHTML = "Welcome to Nology Conference 2021!";
+
+      let formInputs = document.querySelectorAll(".form-input");
+
+      const handleRegister = (event) => {
+        // 3.1 Stop the form from submitting
+        event.preventDefault();
+        // 3.2 Display a success if the form valid
+        const errorMsg = document.getElementById("error-message");
+        if (formInputs[0].value && formInputs[1].value) {
+          errorMsg.classList.remove("show");
+          alert("You have registered");
+          welcomeElement.innerHTML = "Thank you for registering";
+        } else {
+          errorMsg.classList.add("show");
+        }
+      };
+
+      formInputs.forEach((formInput) => {
+        formInput.addEventListener("input", (event) => {
+          let inputValue = event.target.value;
+
+          if (inputValue != undefined && inputValue.length > 0) {
+            event.target.classList.remove("invalid");
+            event.target.classList.add("valid");
+          } else {
+            event.target.classList.remove("valid");
+            event.target.classList.add("invalid");
+          }
+        });
+      });
+
+      const summaryPoints = ["Intro", "SCSS", "Disco", "Challenges"];
+      const summaryList = document.getElementById("summary-list");
+
+      const summaryPointsHTML = summaryPoints.map((summaryPoint) => {
+        return `<li>${summaryPoint}</li>`;
+      });
+
+      summaryList.innerHTML = summaryPointsHTML.join("");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        section {
+            padding: 100px;
+            border: 2px solid pink;
+        }
+
+        form {
+            padding: 20px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form action="">
+            <button>Action</button>
+        </form>
+    </section>
+
+    <script>
+        const section = document.querySelector("section");
+        const form = document.querySelector("form");
+        const button = document.querySelector("button");
+
+        section.addEventListener("click", () => {
+            alert("This is from the section");
+        
+        })
+
+        form.addEventListener("click", () => {
+            alert("This is from the form");
+            
+        })
+
+        button.addEventListener("click", (event) => {
+            alert("This is from the button");
+            event.stopPropagation();
+        })
+    </script>
+</body>
+</html>
