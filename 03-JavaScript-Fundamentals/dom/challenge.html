@@ -1,12 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins";
+        font-weight: bold;
+      }
+      * {
+        font-family: "Lato";
+      }
+      .active {
+          background-color: paleturquoise;
+      }
+      .valid {
+        border: 1px solid green;
+      }
+      .invalid {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Welcome/Title -->
+      <section id="welcome">
+        <h1 id="welcome-title">Welcome to Nology Conference!</h1>
+        <p>Amazing talks from amazing people.</p>
+      </section>
+
+      <!-- Register your interest -->
+      <section id="contact">
+        <h3>Register your interest!</h3>
+        <form>
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input class="form-input" onchange="handleInputChange(event)" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" />
+          </div>
+          <button onclick="handleRegister()">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Script -->
+    <script defer>
+      // 1. Change the welcome innerHTML to 'Welcome to Nology Conference 2021!'
+
+      const heading = document.getElementById("welcome-title");
+      // console.log(heading);
+
+      heading.innerHTML = "Welcome to Nology Conference 2021!";
+
+      // 2. Add an 'active' class to first form-input
+
+      // const formInput = document.getElementsByClassName("form-input");
+      // console.log(formInput);
+
+      // formInput[0].classList.add("active");
+
+      // 3. Create a handleRegister function to run when the form is submitted, a simple pop please.
+
+      const handleRegister = () => {
+          alert("You've registered");
+      }
+
+      // 4. Create a handleInputChange function to validate the input
+      const formInput = document.getElementsByClassName("form-input");
+
+      formInput[0].addEventListener("input", (event) => {
+          let inputValue = event.target.value;
+
+          if (inputValue != undefined && inputValue.length < 0) {
+              event.target.classList.remove("invalid");
+              event.target.classList.add("valid");
+          } else {
+              event.target.classList.remove("valid");
+              event.target.classList.add("invalid");
+          }
+        })
+         // Can you add the class 'valid' if it has a value?​
+         // Can you  add the 'invalid' class if it does not?
+
+      // EXTENSION Dynamically add a ul/li list beneath the form with the summary points of conference
+    </script>
+  </body>
 </html>
