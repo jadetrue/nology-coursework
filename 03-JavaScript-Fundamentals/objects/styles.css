@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #eee;
+    color: #333;
+    padding: 20px;
+}
+
+.students-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.student-card > * {
+    padding: 5px;
+}
+
+.student-card {
+    margin-top: 50px;
+    width: 300px;
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #999;
+}
+
+.student-card ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.student-card img {
+    width: 200px;
+}
+
+
+
+
+
