@@ -32,3 +32,18 @@ const profile = {
 for(let index = 0; index < 12; index++) {
     studentContainer.innerHTML += `${profile.getProfileCard()}`;
 }
+
+class ExampleClass {
+    constructor(firstName, lastName, age) {
+        (this.firstName = firstName), (this.lastName = lastName), (this.age = age)
+    }
+
+    greet() {
+        return `Hello ${this.firstName} ${this.lastName}.`
+    }
+}
+
+const exampleOne = new ExampleClass("Jade", "True", "23");
+const exampleTwo = new ExampleClass("Paul", "Wilkinson", "34");
+
+console.log(exampleOne.greet(), exampleTwo.greet());
