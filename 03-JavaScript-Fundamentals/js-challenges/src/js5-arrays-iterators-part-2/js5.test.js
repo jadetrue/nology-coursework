@@ -30,7 +30,7 @@ describe("Testing totalScoresArr()", () => {
   });
 });
 
-xdescribe("Testing reverseString()", () => {
+describe("Testing reverseString()", () => {
   it("Should return a String", () => {
     expect(typeof reverseString("coconut")).toBe("string");
     expect(typeof reverseString("test")).toBe("string");
@@ -53,7 +53,7 @@ xdescribe("Testing reverseString()", () => {
 
 });
 
-xdescribe("Testing sortCharactersAlphabetically()", () => {
+describe("Testing sortCharactersAlphabetically()", () => {
   const lowerCaseCharArr = "dloejmixwrsnfacqyukvhtgzpb".split("");
   const upperCaseCharArr = "DLOEJMIXWRSNFACQYUKVHTGZPB".split("");
   const sortedCharArr = "abcdefghijklmnopqrstuvwxyz".split("");
@@ -94,7 +94,7 @@ xdescribe("Testing sortCharactersAlphabetically()", () => {
 
 });
 
-xdescribe("Testing sortNumbersHighToLow()", () => {
+describe("Testing sortNumbersHighToLow()", () => {
   const lowToHigh = Array(50)
     .fill(1)
     .map((number, index) => (number += index));

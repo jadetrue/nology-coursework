@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        .valid {
+            background-color: aqua;
+            border: 5px solid navy;
+        }
+        
+        form {
+            margin: 20px 5px;
+        }
+
+        form * {
+            display: block;
+        }
+
+        input { 
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Event Attribute -->
+    <!-- <h1 onmouseover="alert(`Hello`)">This is my heading</h1>
+    <button onclick="alert(`I clicked this`)">Click me</button>
+    <form action="">
+        <input onfocus="alert(`I was focused`)" type="text" />
+    </form> -->
+
+    <h1 id="heading">Hello <span>user</span></h1>
+    <!--<button id="btn">Click me</button>-->
+    <form action="" id="name-form">
+        <!--<input type="text" class="text-input">
+        <input type="text" class="text-input">-->
+
+        <input type="text" name="" id="name-input">
+        <button>Submit</button>
+    </form>
+
+    <ul id="names-list"></ul>
+
+    <script>
+
+        // Getting elements from HTML
+        const heading = document.getElementById("heading");
+        const btn = document.getElementById("btn");
+
+        // Getting multiple elements from HTML
+        const textInputs = document.getElementsByClassName("text-input");
+
+        // console.log(heading);
+
+        // heading.innerHTML = "JavaScript <span>did this</span>";
+
+        // btn.style.backgroundColor = "aqua";
+
+        // btn.innerHTML = "Clicked";
+
+        // console.log(textInputs[0]);
+        // textInputs[0].value = "Type something here";
+
+        // for(let index = 0; index < textInputs.length; index++) {
+        //     textInputs[index].value = "Anything"
+        // }
+
+        // HTML Element 
+        // htmlElement.addEventListener("event", () => {})
+
+        // heading.addEventListener("mouseover", () => {
+        //     heading.innerHTML = "Changed heading";
+            
+        // });
+
+        // heading.addEventListener("mouseleave", () => {
+        //     heading.innerHTML = "Hello <span>User</span>";
+        // });
+
+        // btn.addEventListener("click", () => {
+        //     btn.innerHTML = "Clicked";
+        //     btn.style.color = "navy";
+        //     btn.style.backgroundColor = "white";
+        //     btn.style.border = "none";
+        // });
+
+        // textInputs[0].addEventListener("focus", () => {
+        //     textInputs[0].classList.add("valid");
+        // });
+
+        // textInputs[1].addEventListener("input", (event) => {
+        //     // console.log(event);
+        //     // event.target.classList.add("valid");
+        //     console.log(event.target.value);
+        // });
+
+        const nameForm = document.getElementById("name-form");
+
+        nameForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const namesList = document.getElementById("names-list");
+
+            const inputValue = document.getElementById("name-input").value;
+
+            namesList.innerHTML += `<li>${inputValue}</li>`;
+        })
+    </script>
+</body>
+</html>
