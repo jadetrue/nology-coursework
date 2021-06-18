@@ -48,6 +48,11 @@
           <button onclick="handleRegister()">Send</button>
         </form>
       </section>
+
+      <section id="summary">
+          <h3>Summary</h3>
+          <ul id="summary-list"></ul>
+      </section>
     </main>
 
     <!-- Script -->
@@ -90,6 +95,15 @@
          // Can you  add the 'invalid' class if it does not?
 
       // EXTENSION Dynamically add a ul/li list beneath the form with the summary points of conference
+
+      const summaryPoints = ["Intro", "SCSS", "Disco"];
+      const summaryList = document.getElementById("summary-list");
+
+      const summaryPointsHTML = summaryPoints.map((summaryPoint) => {
+          return `<li>${summaryPoint}</li>`;
+      });
+
+      summaryList.innerHTML = summaryPointsHTML.join("");
     </script>
   </body>
 </html>
