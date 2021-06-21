@@ -1,3 +1,16 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.BankAccount = exports.BookShelf = exports.Modal = exports.Engine = exports.Counter = exports.Loader = exports.Alert = exports.Coordinate = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 /* JS7 builds on the previous challenges and adds the use of Classes, methods and inheritance.
  */
 
@@ -21,23 +34,30 @@
  */
 
 /** Class representing a coordinate. */
-export class Coordinate {
+var Coordinate =
+/*#__PURE__*/
+function () {
   /**
    * Create a coordinate.
    * @param {number} xCoord - 22.
    * @param {number} yCoord - 20.
    */
-  constructor(xCoord, yCoord) {
-    this.xCoord = xCoord,
-    this.yCoord = yCoord
+  function Coordinate(xCoord, yCoord) {
+    _classCallCheck(this, Coordinate);
+
+    this.xCoord = xCoord, this.yCoord = yCoord;
   }
 
-  getCoordinates() {
-    const coordinates = `${this.xCoord}, ${this.yCoord}`;
-    return coordinates;
-  }
-}
+  _createClass(Coordinate, [{
+    key: "getCoordinates",
+    value: function getCoordinates() {
+      var coordinates = "".concat(this.xCoord, ", ").concat(this.yCoord);
+      return coordinates;
+    }
+  }]);
 
+  return Coordinate;
+}();
 /**
  * Complete the Skeleton of a Alert Class below.
  *
@@ -51,25 +71,38 @@ export class Coordinate {
  */
 
 /** Class representing an alert. */
-export class Alert {
+
+
+exports.Coordinate = Coordinate;
+
+var Alert =
+/*#__PURE__*/
+function () {
   /**
    * Create an alert.
    * @param {string} message - "Are sure you want to proceed?"
    */
-  constructor(message) {
-    this.message = message
-  }
+  function Alert(message) {
+    _classCallCheck(this, Alert);
 
+    this.message = message;
+  }
   /**
    * Returns a string with "!!!! " + " !!!!" added to the start and end of the message key.
    * @return {string} "!!!! Are sure you want to proceed? !!!!"
    */
-  printMessage() {
-    const message = `!!!! ${this.message} !!!!`
-    return message;
-  }
-}
 
+
+  _createClass(Alert, [{
+    key: "printMessage",
+    value: function printMessage() {
+      var message = "!!!! ".concat(this.message, " !!!!");
+      return message;
+    }
+  }]);
+
+  return Alert;
+}();
 /**
  * Complete the Skeleton of a Loader Class below.
  *
@@ -89,30 +122,45 @@ export class Alert {
  */
 
 /** Class representing a loader. */
-export class Loader {
+
+
+exports.Alert = Alert;
+
+var Loader =
+/*#__PURE__*/
+function () {
   /**
    * Create a loader.
    * @param {{innerHTML:string}} htmlRef - {innerHTML:""}
    */
-  constructor(htmlRef) {
-    this.htmlRef = htmlRef
-  }
+  function Loader(htmlRef) {
+    _classCallCheck(this, Loader);
 
+    this.htmlRef = htmlRef;
+  }
   /**
    * Updates the htmlRef.innerHTML to display the loader's html.
    */
-  displayLoader() {
-    this.htmlRef.innerHTML = '<div class="loader"></div>';
-  }
 
-  /**
-   * Updates the htmlRef.innerHTML to remove the loader's html.
-   */
-  removeLoader() {
-    this.htmlRef.innerHTML = "";
-  }
-}
 
+  _createClass(Loader, [{
+    key: "displayLoader",
+    value: function displayLoader() {
+      this.htmlRef.innerHTML = '<div class="loader"></div>';
+    }
+    /**
+     * Updates the htmlRef.innerHTML to remove the loader's html.
+     */
+
+  }, {
+    key: "removeLoader",
+    value: function removeLoader() {
+      this.htmlRef.innerHTML = "";
+    }
+  }]);
+
+  return Loader;
+}();
 /**
  * Intemediate Challenges
  */
@@ -137,35 +185,51 @@ export class Loader {
  */
 
 /** Class representing a Counter. */
-export class Counter {
+
+
+exports.Loader = Loader;
+
+var Counter =
+/*#__PURE__*/
+function () {
   /**
    * Create an counter.
    * @param {number} count - 50
    */
-  constructor(count = 0) {
-    this.count = count
-  }
+  function Counter() {
+    var count = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
 
+    _classCallCheck(this, Counter);
+
+    this.count = count;
+  }
   /**
    * A method that increments count by 1.
    * @return {number} 51
    */
 
-  increment() {
-    this.count++;
-    return this.count;
-  }
 
-  /**
-   * A method that decrements count by 1 but will not go below 0.
-   * @return {number} 49
-   */
-  decrement() {
-    if (this.count > 0 ) this.count--;
-    return this.count;
-  }
-}
+  _createClass(Counter, [{
+    key: "increment",
+    value: function increment() {
+      this.count++;
+      return this.count;
+    }
+    /**
+     * A method that decrements count by 1 but will not go below 0.
+     * @return {number} 49
+     */
 
+  }, {
+    key: "decrement",
+    value: function decrement() {
+      if (this.count > 0) this.count--;
+      return this.count;
+    }
+  }]);
+
+  return Counter;
+}();
 /**
  * Complete the Skeleton of a Engine Class below.
  *
@@ -187,29 +251,44 @@ export class Counter {
  */
 
 /** Class representing an engine. */
-export class Engine {
+
+
+exports.Counter = Counter;
+
+var Engine =
+/*#__PURE__*/
+function () {
   /**
    * Create an engine.
    */
-  constructor() {}
-
+  function Engine() {
+    _classCallCheck(this, Engine);
+  }
   /**
    * Updates engineIsRunning to true and returns a conditonal string based if the engine is already running.
    * @return {string} "Engine has started running" or "Engine is already running"
    */
-  startEngine() {
-    return;
-  }
 
-  /**
-   * Updates engineIsRunning to false and returns a conditonal string based if the engine has already stopped.
-   * @return {string} "Engine has stopped running" or "Engine has already stopped running"
-   */
-  stopEngine() {
-    return;
-  }
-}
 
+  _createClass(Engine, [{
+    key: "startEngine",
+    value: function startEngine() {
+      return;
+    }
+    /**
+     * Updates engineIsRunning to false and returns a conditonal string based if the engine has already stopped.
+     * @return {string} "Engine has stopped running" or "Engine has already stopped running"
+     */
+
+  }, {
+    key: "stopEngine",
+    value: function stopEngine() {
+      return;
+    }
+  }]);
+
+  return Engine;
+}();
 /**
  * Complete the Skeleton of the Modal Class below.
  *
@@ -241,28 +320,30 @@ export class Engine {
  */
 
 /** Class representing a modal. */
-export class Modal {
-  /**
-   * Create a modal.
-   * @param {HTMLElement} htmlRef - { innerHTML:"", classList:{ list: [], toggle()}}
-   * @param {string} title - "Error"
-   * @param {string} message - "We are currently unable to provide this service"
-   */
-  constructor() {}
 
-  /**
-   * A method that renders the html for a modal.
-   */
 
-  // WRITE RENDER HTML METHOD HERE
+exports.Engine = Engine;
 
-  /**
-   * A method that toggles a CSS class to either show or hide the modal.
-   */
-
-  // WRITE DISPLAY MODAL METHOD HERE
+var Modal =
+/**
+ * Create a modal.
+ * @param {HTMLElement} htmlRef - { innerHTML:"", classList:{ list: [], toggle()}}
+ * @param {string} title - "Error"
+ * @param {string} message - "We are currently unable to provide this service"
+ */
+function Modal() {
+  _classCallCheck(this, Modal);
 }
+/**
+ * A method that renders the html for a modal.
+ */
+// WRITE RENDER HTML METHOD HERE
 
+/**
+ * A method that toggles a CSS class to either show or hide the modal.
+ */
+// WRITE DISPLAY MODAL METHOD HERE
+;
 /**
  * Advanced Challenges
  */
@@ -294,49 +375,63 @@ export class Modal {
  */
 
 /** Class representing a book shelf. */
-export class BookShelf {
+
+
+exports.Modal = Modal;
+
+var BookShelf =
+/*#__PURE__*/
+function () {
   /**
    * Create a book shelf.
    * @param {string} shelfId - "aa0050a01"
    * @param {string[]} booksOnShelf - ["JavaScript for Kids", "Learning JavaScript Design Patterns"]
    *
    */
-  constructor(shelfId, booksOnShelf = []) {
+  function BookShelf(shelfId) {
+    var booksOnShelf = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
+    _classCallCheck(this, BookShelf);
+
     this._shelfId = shelfId;
     this._booksOnShelf = booksOnShelf;
   }
-
   /**
    * A getter that returns the current books on the shelf.
    * @return {string[]} ["JavaScript for Kids", "Learning JavaScript Design Patterns"]
    */
-  get booksOnShelf() {
-    return this._booksOnShelf;
-  }
 
-  /**
-   * A setter that replaces the current books on the shelf with a new list of books.
-   * @param {string[]} bookArray ["Learn JavaScript Visually"]
-   */
-  set booksOnShelf(bookArray = []) {
-    this._booksOnShelf = bookArray;
-  }
 
-  /**
-   * A getter that returns the latest book to be added to the book shelf.
-   * @return {string} "Learning JavaScript Design Patterns"
-   */
+  _createClass(BookShelf, [{
+    key: "booksOnShelf",
+    get: function get() {
+      return this._booksOnShelf;
+    }
+    /**
+     * A setter that replaces the current books on the shelf with a new list of books.
+     * @param {string[]} bookArray ["Learn JavaScript Visually"]
+     */
+    ,
+    set: function set() {
+      var bookArray = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      this._booksOnShelf = bookArray;
+    }
+    /**
+     * A getter that returns the latest book to be added to the book shelf.
+     * @return {string} "Learning JavaScript Design Patterns"
+     */
+    // WRITE LATEST BOOK GETTER HERE
 
-  // WRITE LATEST BOOK GETTER HERE
+    /**
+     * A setter that adds a new book to the list of books.
+     * @param {string} "Eloquent JavaScript"
+     */
+    // WRITE ADD BOOK TO SHELF SETTER HERE
 
-  /**
-   * A setter that adds a new book to the list of books.
-   * @param {string} "Eloquent JavaScript"
-   */
+  }]);
 
-  // WRITE ADD BOOK TO SHELF SETTER HERE
-}
-
+  return BookShelf;
+}();
 /**
  * Expert Challenge
  */
@@ -380,42 +475,46 @@ export class BookShelf {
  */
 
 /** Class representing a bank account. */
-export class BankAccount {
-  /**
-   * Create a bank account.
-   * @param {string} name
-   * @param {string} email
-   * @param {number} balance
-   */
-  constructor() {}
 
-  /**
-   * A getter that returns the current balance.
-   * @return {number} 20
-   */
 
-  // WRITE BALANCE GETTER HERE
+exports.BookShelf = BookShelf;
 
-  /**
-   * A method that deposits to the balance.
-   * It checks if the input is correct.
-   * If if it is incorrect it returns "Invalid input, unable to deposit".
-   * If it is correct it adds the input to the balance and returns the updated balance.
-   * @param {(number|string)} toDeposit 20 or "Bad Input"
-   * @return {(number|string)} 40 or "Invalid input, unable to deposit"
-   */
-
-  // WRITE DEPOSIT METHOD HERE
-
-  /**
-   * A method that withdraws from the balance.
-   * It checks if the input is correct.
-   * If if it is incorrect it returns "Invalid input, unable to deposit".
-   * If if it is correct but more then the balance it returns "Insufficient funds, unable to withdraw".
-   * If it is correct it subtracts the input to the balance and returns the updated balance.
-   * @param {(number|string)} toWithdraw 20 or "Bad Input" or 1000
-   * @return {(number|string)} 40 or "Invalid input, unable to deposit" or "Insufficient funds, unable to withdraw"
-   */
-
-  // WRITE WITH DRAW METHOD HERE
+var BankAccount =
+/**
+ * Create a bank account.
+ * @param {string} name
+ * @param {string} email
+ * @param {number} balance
+ */
+function BankAccount() {
+  _classCallCheck(this, BankAccount);
 }
+/**
+ * A getter that returns the current balance.
+ * @return {number} 20
+ */
+// WRITE BALANCE GETTER HERE
+
+/**
+ * A method that deposits to the balance.
+ * It checks if the input is correct.
+ * If if it is incorrect it returns "Invalid input, unable to deposit".
+ * If it is correct it adds the input to the balance and returns the updated balance.
+ * @param {(number|string)} toDeposit 20 or "Bad Input"
+ * @return {(number|string)} 40 or "Invalid input, unable to deposit"
+ */
+// WRITE DEPOSIT METHOD HERE
+
+/**
+ * A method that withdraws from the balance.
+ * It checks if the input is correct.
+ * If if it is incorrect it returns "Invalid input, unable to deposit".
+ * If if it is correct but more then the balance it returns "Insufficient funds, unable to withdraw".
+ * If it is correct it subtracts the input to the balance and returns the updated balance.
+ * @param {(number|string)} toWithdraw 20 or "Bad Input" or 1000
+ * @return {(number|string)} 40 or "Invalid input, unable to deposit" or "Insufficient funds, unable to withdraw"
+ */
+// WRITE WITH DRAW METHOD HERE
+;
+
+exports.BankAccount = BankAccount;
