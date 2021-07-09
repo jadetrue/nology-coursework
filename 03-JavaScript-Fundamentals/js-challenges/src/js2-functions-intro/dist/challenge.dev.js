@@ -1,3 +1,10 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getStudentSummary = exports.calculateAreaOfCirlce = exports.getGrade = exports.calculateLifetimeSupply = exports.celsiusToFahrenheit = exports.checkIfNewHighScore = exports.multiplyNumbers = exports.findSmallestNumber = exports.createFullName = void 0;
+
 /* JS2 builds on the previous challenges and adds the use of functions with parameters */
 
 /* 
@@ -16,11 +23,10 @@
  * @param {string} lastName Smith
  * @returns {string} John Smith
  */
-export const createFullName = (firstName, lastName) => {
-    const fullName = firstName + " " + lastName;
-    return fullName;
+var createFullName = function createFullName(firstName, lastName) {
+  var fullName = firstName + " " + lastName;
+  return fullName;
 };
-
 /**
  * A function that takes two numbers as an input and returns the smallest one.
  * !!NOTE!! You'll have to write in the parameters for this function yourself.
@@ -29,14 +35,17 @@ export const createFullName = (firstName, lastName) => {
  * @param {number} number2 200
  * @returns {number} 100
  */
-export const findSmallestNumber = (numberOne, numberTwo) => {
-    if (numberOne < numberTwo) {
-        return numberOne;
-    } else {
-        return numberTwo;
-    }
-};
 
+
+exports.createFullName = createFullName;
+
+var findSmallestNumber = function findSmallestNumber(numberOne, numberTwo) {
+  if (numberOne < numberTwo) {
+    return numberOne;
+  } else {
+    return numberTwo;
+  }
+};
 /**
  * A function that takes two numbers as input, multiplies them together and returns the product.
  * !!NOTE!! You'll have to write in the parameters for this function yourself.
@@ -45,12 +54,14 @@ export const findSmallestNumber = (numberOne, numberTwo) => {
  * @param {number} number2 6
  * @returns {number} 18
  */
-export const multiplyNumbers = (number1, number2) => {
-    const total = number1 * number2;
 
-    return total;
+
+exports.findSmallestNumber = findSmallestNumber;
+
+var multiplyNumbers = function multiplyNumbers(number1, number2) {
+  var total = number1 * number2;
+  return total;
 };
-
 /* Intermediate Challenges */
 
 /**
@@ -63,33 +74,33 @@ export const multiplyNumbers = (number1, number2) => {
  * @param {number} highScore 325
  * @returns {string} "You got a new high score!" | "So close!" | "Better luck next time!"
  */
-export const checkIfNewHighScore = (score, highScore) => {
-    if (score > highScore) {
-        return "You got a new high score!";
-    } else if (score == highScore) {
-        return "So close!";
-    } else {
-        return "Better luck next time!";
-    }
-};
 
+
+exports.multiplyNumbers = multiplyNumbers;
+
+var checkIfNewHighScore = function checkIfNewHighScore(score, highScore) {
+  if (score > highScore) {
+    return "You got a new high score!";
+  } else if (score == highScore) {
+    return "So close!";
+  } else {
+    return "Better luck next time!";
+  }
+};
 /**
  * A function that converts a temperature a in celsuis to fahrenheit and outputs it in a string format -> "15 degrees celsius is 59 degrees fahrenheit".
  *
  * @param {number} tempInCelsius 15
  * @returns {string} "15 degrees celsius is 59 degrees fahrenheit"
  */
-export const celsiusToFahrenheit = (tempInCelsius) => {
-    const celsiusInFahrenheit = (tempInCelsius * 9) / 5 + 32;
 
-    return (
-        tempInCelsius +
-        " degrees celsius is " +
-        celsiusInFahrenheit +
-        " degrees fahrenheit"
-    );
+
+exports.checkIfNewHighScore = checkIfNewHighScore;
+
+var celsiusToFahrenheit = function celsiusToFahrenheit(tempInCelsius) {
+  var celsiusInFahrenheit = tempInCelsius * 9 / 5 + 32;
+  return tempInCelsius + " degrees celsius is " + celsiusInFahrenheit + " degrees fahrenheit";
 };
-
 /**
  * A function that calculates the numebr of snickers needed for the rest of your life based on the number you eat per day,
  * your age and your maximum age.
@@ -99,12 +110,14 @@ export const celsiusToFahrenheit = (tempInCelsius) => {
  * @param {number} maxAge 90
  * @returns {number} 47450
  */
-export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
-    snickersPerDay = snickersPerDay * 365 * (maxAge - age);
 
-    return snickersPerDay;
+
+exports.celsiusToFahrenheit = celsiusToFahrenheit;
+
+var calculateLifetimeSupply = function calculateLifetimeSupply(snickersPerDay, age, maxAge) {
+  snickersPerDay = snickersPerDay * 365 * (maxAge - age);
+  return snickersPerDay;
 };
-
 /* Advanced Challenges */
 
 /**
@@ -121,37 +134,43 @@ export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
  * @param {number} score 0 - 100
  * @returns {string} A - F | Score unavailable
  */
-export const getGrade = (score) => {
-    if (score > 100 || score < 0 || typeof score !== "number") {
-        return "Score unavailable";
-    }
 
-    if (score >= 80) {
-        return "A";
-    } else if (score >= 70) {
-        return "B";
-    } else if (score >= 60) {
-        return "C";
-    } else if (score >= 50) {
-        return "D";
-    } else if (score >= 40) {
-        return "E";
-    } else {
-        return "F";
-    }
+
+exports.calculateLifetimeSupply = calculateLifetimeSupply;
+
+var getGrade = function getGrade(score) {
+  if (score > 100 || score < 0 || typeof score !== "number") {
+    return "Score unavailable";
+  }
+
+  if (score >= 80) {
+    return "A";
+  } else if (score >= 70) {
+    return "B";
+  } else if (score >= 60) {
+    return "C";
+  } else if (score >= 50) {
+    return "D";
+  } else if (score >= 40) {
+    return "E";
+  } else {
+    return "F";
+  }
 };
-
 /**
  * A function that find the area of a circle to 2 decimal places.
  *
  * @param {number} radius 3
  * @returns {number} 28.27
  */
-export const calculateAreaOfCirlce = (radius) => {
-    const result = Math.round(radius * radius * Math.PI * 100) / 100;
-    return result;
-};
 
+
+exports.getGrade = getGrade;
+
+var calculateAreaOfCirlce = function calculateAreaOfCirlce(radius) {
+  var result = Math.round(radius * radius * Math.PI * 100) / 100;
+  return result;
+};
 /* Expert Challenge */
 
 /**
@@ -169,6 +188,12 @@ export const calculateAreaOfCirlce = (radius) => {
  * @param {number} score 0 - 100
  * @param {string} name John
  */
-export const getStudentSummary = (score, name) => {
-    /* Write your code here */
+
+
+exports.calculateAreaOfCirlce = calculateAreaOfCirlce;
+
+var getStudentSummary = function getStudentSummary(score, name) {
+  /* Write your code here */
 };
+
+exports.getStudentSummary = getStudentSummary;
