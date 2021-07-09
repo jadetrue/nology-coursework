@@ -1,3 +1,10 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.encryptString = exports.totalNestedScoresArr = exports.checkStringPalindrome = exports.checkPrimaryColours = exports.checkItemInstock = exports.sortNumbersHighToLow = exports.sortCharactersAlphabetically = exports.reverseString = exports.totalScoresArr = void 0;
+
 /* JS5 builds on the previous challenges and adds the use of MORE Array iterators, Arrays, For Loops, Conditionals (If, else, switch)
  *  & calling your own functions.
  */
@@ -20,12 +27,12 @@
  * @param {number[]} numberArr [7, 7, 6, 2, 3, 2, 3]
  * @return {number} 30
  */
-
-export const totalScoresArr = (scoresArr) => {
-    const sum = scoresArr.reduce((total, current) => (total += current), 0);
-    return sum;
+var totalScoresArr = function totalScoresArr(scoresArr) {
+  var sum = scoresArr.reduce(function (total, current) {
+    return total += current;
+  }, 0);
+  return sum;
 };
-
 /**
  * A function that turns a string into an array and uses a ARRAY ITERATOR to reverse it.
  * It will need to keep spaces between words.
@@ -35,14 +42,15 @@ export const totalScoresArr = (scoresArr) => {
  * @return {string} "esrever"
  */
 
-export const reverseString = (toReverse) => {
-    const splitString = toReverse.split("");
-    const stringReversed = splitString.reverse();
-    const joinReverse = stringReversed.join("");
 
-    return joinReverse;
+exports.totalScoresArr = totalScoresArr;
+
+var reverseString = function reverseString(toReverse) {
+  var splitString = toReverse.split("");
+  var stringReversed = splitString.reverse();
+  var joinReverse = stringReversed.join("");
+  return joinReverse;
 };
-
 /**
  * A function that arranges an array of characters alphabetically.
  * Each character will need to be lowercase.
@@ -52,15 +60,16 @@ export const reverseString = (toReverse) => {
  * @return {string[]} ["b", "b", "b", "g", "l", "n", "x", "x"]
  */
 
-export const sortCharactersAlphabetically = (charcterArr) => {
-    const alphabetically = charcterArr.map((charcter) =>
-        charcter.toLocaleLowerCase()
-    );
 
-    const sorted = alphabetically.sort();
-    return sorted;
+exports.reverseString = reverseString;
+
+var sortCharactersAlphabetically = function sortCharactersAlphabetically(charcterArr) {
+  var alphabetically = charcterArr.map(function (charcter) {
+    return charcter.toLocaleLowerCase();
+  });
+  var sorted = alphabetically.sort();
+  return sorted;
 };
-
 /**
  * Intemediate Challenges
  */
@@ -72,13 +81,15 @@ export const sortCharactersAlphabetically = (charcterArr) => {
  * @return {number[]} [9190, 55, 9, 6, 2, 0.5]
  */
 
-export const sortNumbersHighToLow = (numberArr) => {
-    const sortHighToLow = numberArr.sort((a, b) => {
-        return b - a;
-    });
-    return sortHighToLow;
-};
 
+exports.sortCharactersAlphabetically = sortCharactersAlphabetically;
+
+var sortNumbersHighToLow = function sortNumbersHighToLow(numberArr) {
+  var sortHighToLow = numberArr.sort(function (a, b) {
+    return b - a;
+  });
+  return sortHighToLow;
+};
 /**
  * A function that checks if a given item is 'instock'.
  * You have been given a 'stocklist' in the function body.
@@ -93,32 +104,20 @@ export const sortNumbersHighToLow = (numberArr) => {
  * @return {string} "orange is instock, it is on aisle 2."
  */
 
-export const checkItemInstock = (toCheck) => {
-    const stockList = [
-        "apple",
-        "banana",
-        "orange",
-        "coconut",
-        "strawberry",
-        "lime",
-        "grapefruit",
-        "lemon",
-        "kumquat",
-        "blueberry",
-        "melon",
-    ];
 
-    const inStock = stockList.indexOf(toCheck);
+exports.sortNumbersHighToLow = sortNumbersHighToLow;
 
-    let message = `Sorry ${toCheck} is not instock.`;
+var checkItemInstock = function checkItemInstock(toCheck) {
+  var stockList = ["apple", "banana", "orange", "coconut", "strawberry", "lime", "grapefruit", "lemon", "kumquat", "blueberry", "melon"];
+  var inStock = stockList.indexOf(toCheck);
+  var message = "Sorry ".concat(toCheck, " is not instock.");
 
-    if (inStock >= 0) {
-        message = `${toCheck} is instock, it is on aisle ${inStock}.`;
-    }
+  if (inStock >= 0) {
+    message = "".concat(toCheck, " is instock, it is on aisle ").concat(inStock, ".");
+  }
 
-    return message;
+  return message;
 };
-
 /**
  * A function that takes an array of colours and checks if EVERY colour is a primary colour.
  * The primary colours are ["red", "blue", "yellow"].
@@ -129,10 +128,12 @@ export const checkItemInstock = (toCheck) => {
  * @return {boolean} false
  */
 
-export const checkPrimaryColours = (coloursArr) => {
-    return;
-};
 
+exports.checkItemInstock = checkItemInstock;
+
+var checkPrimaryColours = function checkPrimaryColours(coloursArr) {
+  return;
+};
 /**
  * Advanced Challenges
  */
@@ -146,13 +147,14 @@ export const checkPrimaryColours = (coloursArr) => {
  * @return {boolean} true
  */
 
-export const checkStringPalindrome = (stringOne) => {
-    const reversed = reverseString(stringOne);
-    const palindromTrue = reversed === stringOne;
 
-    return palindromTrue;
+exports.checkPrimaryColours = checkPrimaryColours;
+
+var checkStringPalindrome = function checkStringPalindrome(stringOne) {
+  var reversed = reverseString(stringOne);
+  var palindromTrue = reversed === stringOne;
+  return palindromTrue;
 };
-
 /**
  * A function that totals a nested array of scores arrays.
  * It only needs to total each nested array.
@@ -163,10 +165,12 @@ export const checkStringPalindrome = (stringOne) => {
  * @return {number[]} [20, 7, 3]
  */
 
-export const totalNestedScoresArr = (scoresArr) => {
-    return;
-};
 
+exports.checkStringPalindrome = checkStringPalindrome;
+
+var totalNestedScoresArr = function totalNestedScoresArr(scoresArr) {
+  return;
+};
 /**
  * Expert Challenge
  */
@@ -196,6 +200,11 @@ export const totalNestedScoresArr = (scoresArr) => {
  * @return {string} "ertnyecpd"
  */
 
-export const encryptString = (toEncrypt) => {
-    return;
+
+exports.totalNestedScoresArr = totalNestedScoresArr;
+
+var encryptString = function encryptString(toEncrypt) {
+  return;
 };
+
+exports.encryptString = encryptString;
