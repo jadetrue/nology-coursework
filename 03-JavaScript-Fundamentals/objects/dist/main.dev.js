@@ -30,7 +30,7 @@ var profile = {
   }
 };
 
-for (var index = 0; index < 12; index++) {
+for (var index = 0; index < 4; index++) {
   studentContainer.innerHTML += "".concat(profile.getProfileCard());
 }
 

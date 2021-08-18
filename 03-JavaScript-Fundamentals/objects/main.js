@@ -29,7 +29,7 @@ const profile = {
     }
 }
 
-for(let index = 0; index < 12; index++) {
+for(let index = 0; index < 4; index++) {
     studentContainer.innerHTML += `${profile.getProfileCard()}`;
 }
 
