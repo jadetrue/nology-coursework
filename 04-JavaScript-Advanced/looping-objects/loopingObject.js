@@ -45,7 +45,25 @@ const validObject = function (correctObject) {
 
 console.log(validObject(message));
 
+const validMessageEntries = Object.entries(message);
+console.log(validMessageEntries);
 
-const jade = {
-    name = 
-}
+const validateMessageObject = (messageObject) => {
+    const objectEntries = Object.entries(messageObject);
+
+    const validation = objectEntries.every((entry) => {
+        const key = entry[0];
+        const value = entry[1];
+
+        const typecheck = typeof value === 'string';
+
+        const keyValid = ['userName', 'content'];
+        const keycheck = keyValid.includes(key);
+
+        return typecheck && keycheck;
+    });
+
+    return validation;
+};
+
+console.log(validateMessageObject(message));
