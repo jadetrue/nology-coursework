@@ -19,7 +19,7 @@ const firstName = "John";
 const lastName = "Smith";
 
 export const createFullName = () => {
-  return firstName + ' ' + lastName;
+    return firstName + " " + lastName;
 };
 
 /**
@@ -32,7 +32,7 @@ const largeNumber1 = 100;
 const largeNumber2 = 200;
 
 export const findLargestNumber = () => {
-  return largeNumber2;
+    return largeNumber2;
 };
 
 /**
@@ -45,7 +45,7 @@ const addNumber1 = 12;
 const addNumber2 = 24;
 
 export const addNumbers = () => {
-  return (addNumber1 + addNumber2);
+    return addNumber1 + addNumber2;
 };
 
 /* Intermediate Challenges */
@@ -59,7 +59,7 @@ export const addNumbers = () => {
 const password = "thisIsMyVeryLongPassword123456789";
 
 export const findLengthOfPassword = () => {
-  return password.length;
+    return password.length;
 };
 
 /**
@@ -75,17 +75,17 @@ export const findLengthOfPassword = () => {
 const thing = "I am a thing";
 
 export const findType = () => {
-   const thingType = typeof thing;
+    const thingType = typeof thing;
 
-   if (thingType === 'string') {
-     return "This is a string";
-   } else if (thingType === 'number') {
-     return "This is a number";
-   } else if (thingType === 'boolean') {
-     return "This is a boolean";
-   } else {
-     return "I don't know what this thing is";
-   }
+    if (thingType === "string") {
+        return "This is a string";
+    } else if (thingType === "number") {
+        return "This is a number";
+    } else if (thingType === "boolean") {
+        return "This is a boolean";
+    } else {
+        return "I don't know what this thing is";
+    }
 };
 
 /**
@@ -98,12 +98,12 @@ export const findType = () => {
 const nameTagOption = "Timothy";
 
 export const getIsValidOnNameTag = () => {
-  const isCaps = nameTagOption.substring(0,1);
-  const name = nameTagOption.length <= 8 && isCaps === isCaps.toUpperCase();
-  
-  // https://www.w3schools.com/jsref/jsref_substring.asp
+    const isCaps = nameTagOption.substring(0, 1);
+    const name = nameTagOption.length <= 8 && isCaps === isCaps.toUpperCase();
 
-  return name;
+    // https://www.w3schools.com/jsref/jsref_substring.asp
+
+    return name;
 };
 
 /* Advanced Challenges */
@@ -117,8 +117,8 @@ export const getIsValidOnNameTag = () => {
 const stringToConvert = "14.45";
 
 export const convertStringToNumber = () => {
-  let number = stringToConvert;
-  return number = parseFloat(stringToConvert, 10);
+    let number = stringToConvert;
+    return (number = parseFloat(stringToConvert, 10));
 };
 
 // https://gomakethings.com/converting-strings-to-numbers-with-vanilla-javascript/
@@ -134,9 +134,11 @@ export const convertStringToNumber = () => {
 const stringWithUppercaseLetters = "I Am A String With Uppercase Letters";
 
 export const getHasUppercaseLetters = () => {
-  const getHasUppercaseLetters = /(\b[A-Z][A-Z]+|\b[A-Z]\b)/g;
-  const hasUpperCaseLetters = getHasUppercaseLetters.test(stringWithUppercaseLetters);
-  return hasUpperCaseLetters;
+    const getHasUppercaseLetters = /(\b[A-Z][A-Z]+|\b[A-Z]\b)/g;
+    const hasUpperCaseLetters = getHasUppercaseLetters.test(
+        stringWithUppercaseLetters
+    );
+    return hasUpperCaseLetters;
 };
 
 /* Expert Challenge */
@@ -149,10 +151,8 @@ export const getHasUppercaseLetters = () => {
  */
 const pascalCaseVariableName = "IWantToBeSnakeCase";
 
-export const convertPascalCaseToSnakeCase = () => {
-  const length = pascalCaseVariableName.length();
-  const snakeCase = pascalCaseVariableName.charAt(0)+"";
-
-  return length.snakeCase;
-
-};
+export const convertPascalCaseToSnakeCase = () =>
+    pascalCaseVariableName
+        .split(/(?=[A-Z])/)
+        .join("_")
+        .toLowerCase();

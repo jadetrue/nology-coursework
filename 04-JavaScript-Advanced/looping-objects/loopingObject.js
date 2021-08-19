@@ -44,3 +44,8 @@ const validObject = function (correctObject) {
 };
 
 console.log(validObject(message));
+
+
+const jade = {
+    name = 
+}

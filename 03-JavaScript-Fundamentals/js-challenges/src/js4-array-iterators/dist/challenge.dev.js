@@ -1,3 +1,10 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fizzBuzz = exports.formatString = exports.formatStringArray = exports.filterBooksBySearch = exports.createOddEvenArray = exports.convertStringToNumbersArray = exports.createListOfPoessessions = exports.createPercentageList = exports.removeFalseValues = void 0;
+
 /* JS4 builds on the previous challenges and adds the use of Array iterators, Arrays, For Loops, Conditionals (If, else, switch)
  *  & calling your own functions.
  */
@@ -20,12 +27,12 @@
  * @param {boolean[]} booleanArr [true, true, false, false, true]
  * @return {boolean[]} [true, true, true]
  */
-
-export const removeFalseValues = (booleanArr) => {
-    const booleanArrTrue = booleanArr.filter((boolean) => boolean);
-    return booleanArrTrue;
+var removeFalseValues = function removeFalseValues(booleanArr) {
+  var booleanArrTrue = booleanArr.filter(function (_boolean) {
+    return _boolean;
+  });
+  return booleanArrTrue;
 };
-
 /**
  * A function that takes an array of numbers that are between 0 - 1.
  * The function needs to create a new array with the numbers converted into a percentage
@@ -34,11 +41,15 @@ export const removeFalseValues = (booleanArr) => {
  * @return {string[]} ["100%", "50%", "70%", "25%"]
  */
 
-export const createPercentageList = (numbersArr) => {
-    const percentageList = numbersArr.map((number) => `${number * 100}%`);
-    return percentageList;
-};
 
+exports.removeFalseValues = removeFalseValues;
+
+var createPercentageList = function createPercentageList(numbersArr) {
+  var percentageList = numbersArr.map(function (number) {
+    return "".concat(number * 100, "%");
+  });
+  return percentageList;
+};
 /**
  * A function that takes an array of possessions and a name.
  * The functions needs to create a new array with the name prefixed to each item.
@@ -48,13 +59,15 @@ export const createPercentageList = (numbersArr) => {
  * @return {string[]} ["disco shoes", "disco jacket", "disco belt"]
  */
 
-export const createListOfPoessessions = (possessionsArr, name) => {
-    const listOfPoessessions = possessionsArr.map(
-        (possession) => name + " " + possession
-    );
-    return listOfPoessessions;
-};
 
+exports.createPercentageList = createPercentageList;
+
+var createListOfPoessessions = function createListOfPoessessions(possessionsArr, name) {
+  var listOfPoessessions = possessionsArr.map(function (possession) {
+    return name + " " + possession;
+  });
+  return listOfPoessessions;
+};
 /**
  * Intemediate Challenges
  */
@@ -76,13 +89,15 @@ export const createListOfPoessessions = (possessionsArr, name) => {
  * @return {number[]} [1, 2, 3, 4, 5]
  */
 
-export const convertStringToNumbersArray = (numberString) => {
-    const arrOfNumbers = numberString
-        .split("+")
-        .map((number) => Number(number));
-    return arrOfNumbers;
-};
 
+exports.createListOfPoessessions = createListOfPoessessions;
+
+var convertStringToNumbersArray = function convertStringToNumbersArray(numberString) {
+  var arrOfNumbers = numberString.split("+").map(function (number) {
+    return Number(number);
+  });
+  return arrOfNumbers;
+};
 /**
  * A function that takes a string of numbers joined with a "+" and creates a new array based on if the number is even or odd.
  * Every number in the string will need to checked.
@@ -91,14 +106,16 @@ export const convertStringToNumbersArray = (numberString) => {
  * @return {string[]} ['odd', 'even', 'odd', 'even', 'odd']
  */
 
-export const createOddEvenArray = (numberString) => {
-    const numberArray = convertStringToNumbersArray(numberString);
-    const oddEven = numberArray.map((number) =>
-        number % 2 === 0 ? "even" : "odd"
-    );
-    return oddEven;
-};
 
+exports.convertStringToNumbersArray = convertStringToNumbersArray;
+
+var createOddEvenArray = function createOddEvenArray(numberString) {
+  var numberArray = convertStringToNumbersArray(numberString);
+  var oddEven = numberArray.map(function (number) {
+    return number % 2 === 0 ? "even" : "odd";
+  });
+  return oddEven;
+};
 /**
  * A function that takes an array of book titles and a search term.
  * The function needs fo remove any book titles that do not include the search term.
@@ -108,11 +125,15 @@ export const createOddEvenArray = (numberString) => {
  * @return {string[]} - ["The Google story"]
  */
 
-export const filterBooksBySearch = (booksArr, searchTerm) => {
-    const result = booksArr.filter((book) => book.includes(searchTerm));
-    return result;
-};
 
+exports.createOddEvenArray = createOddEvenArray;
+
+var filterBooksBySearch = function filterBooksBySearch(booksArr, searchTerm) {
+  var result = booksArr.filter(function (book) {
+    return book.includes(searchTerm);
+  });
+  return result;
+};
 /**
  * Advanced Challenges
  */
@@ -129,19 +150,18 @@ export const filterBooksBySearch = (booksArr, searchTerm) => {
  * @return {string} "disco+shoes"
  */
 
-export const formatStringArray = (stringArr) => {
-    const cleanedArr = stringArr.forEach((string) => {
-        const cleanStr = string.trim().toLowerCase();
-        return cleanStr;
-    });
 
-    // console.log(???)
+exports.filterBooksBySearch = filterBooksBySearch;
 
-    const joinedString = cleanedArr.join("+");
+var formatStringArray = function formatStringArray(stringArr) {
+  var cleanedArr = stringArr.forEach(function (string) {
+    var cleanStr = string.trim().toLowerCase();
+    return cleanStr;
+  }); // console.log(???)
 
-    return joinedString;
+  var joinedString = cleanedArr.join("+");
+  return joinedString;
 };
-
 /**
  * A function that takes a string, cleans it and formats it based on a condition.
  *
@@ -155,10 +175,12 @@ export const formatStringArray = (stringArr) => {
  * @return {string[]} [ 'H', 'e', 'L', 'l', 'O' ]
  */
 
-export const formatString = (string) => {
-    return;
-};
 
+exports.formatStringArray = formatStringArray;
+
+var formatString = function formatString(string) {
+  return;
+};
 /**
  * Expert Challenge
  */
@@ -182,17 +204,21 @@ export const formatString = (string) => {
  * @return {string[]} [ "Fizz", "Buzz", "FizzBuzz", "2" ]
  */
 
-export const fizzBuzz = (mixedArray = []) => {
-    const positives = mixedArray.filter((item) => item > 0 && Number(item));
 
-    const myFizzBuzz = positives.map((number) => {
-        let string = "";
+exports.formatString = formatString;
 
-        if (!(number % 3)) string += "Fizz";
-        if (!(number % 5)) string += "Buzz";
-
-        return string || number.toString();
-    });
-
-    return myFizzBuzz;
+var fizzBuzz = function fizzBuzz() {
+  var mixedArray = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var positives = mixedArray.filter(function (item) {
+    return item > 0 && Number(item);
+  });
+  var myFizzBuzz = positives.map(function (number) {
+    var string = "";
+    if (!(number % 3)) string += "Fizz";
+    if (!(number % 5)) string += "Buzz";
+    return string || number.toString();
+  });
+  return myFizzBuzz;
 };
+
+exports.fizzBuzz = fizzBuzz;
