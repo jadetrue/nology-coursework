@@ -25,4 +25,9 @@ describe('Darts', () => {
         const output = findScore(0, 0);
         expect(output).toEqual(10);
     });
+
+    it('Invalid input', () => {
+        const output = findScore('A', 0);
+        expect(output).toEqual(null);
+    });
 });

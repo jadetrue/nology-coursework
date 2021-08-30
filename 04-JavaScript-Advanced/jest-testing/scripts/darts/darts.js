@@ -1,4 +1,9 @@
 export const findScore = (x, y) => {
+    // THIS IS WHY TYPESCRIPT IS USEFUL
+    if (Number.isNaN(Number(x)) || Number.isNaN(Number(x))) {
+        return null;
+    }
+
     const distance = Math.sqrt(x * x + y * y);
 
     if (distance > 10) {
