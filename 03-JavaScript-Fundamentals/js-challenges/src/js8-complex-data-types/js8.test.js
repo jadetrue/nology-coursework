@@ -210,7 +210,7 @@ describe('Intermediate level challenges', () => {
         });
     });
 
-    xdescribe('totalShoppingBasket() tests', () => {
+    describe('totalShoppingBasket() tests', () => {
         it('Should return a number', () => {
             expect(typeof totalShoppingBasket(shoppingBasketWithTotals)).toBe(
                 'number'
@@ -223,7 +223,7 @@ describe('Intermediate level challenges', () => {
     });
 });
 
-xdescribe('getImportantKeys() tests', () => {
+describe('getImportantKeys() tests', () => {
     const mealsArr = [
         {
             id: 10,

@@ -97,7 +97,11 @@ export const settotalPrice = (shoppingBasketArr) => {
  * @returns {number} The total cost of the order
  */
 export const totalShoppingBasket = (shoppingBasketArr) => {
-    // Write code here
+    const newShoppingBasketTotal = shoppingBasketArr.reduce((prev, cur) => {
+        return (prev += cur.totalPrice);
+    }, 0);
+
+    return newShoppingBasketTotal;
 };
 
 /* Advanced Challenges */
@@ -110,7 +114,17 @@ export const totalShoppingBasket = (shoppingBasketArr) => {
  * @returns {{id: number, name: string, ingredients: string[], country: string}[]} An array of cleaned meal objects
  */
 export const getImportantKeys = (mealsArr) => {
-    // Write code here
+    const newMeal = mealsArr.map((meal) => {
+        const obj = {
+            id: meal.id,
+            name: meal.name,
+            ingredients: meal.ingredients,
+            country: meal.country,
+        };
+        return obj;
+    });
+
+    return newMeal;
 };
 
 /**
