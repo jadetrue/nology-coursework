@@ -1,0 +1,27 @@
+{
+  "name": "nology-coursework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "jest": "^27.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadetruexo/nology-coursework.git"
+  },
+  "keywords": [],
+  "author": "Jade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jadetruexo/nology-coursework/issues"
+  },
+  "homepage": "https://github.com/jadetruexo/nology-coursework#readme"
+}
