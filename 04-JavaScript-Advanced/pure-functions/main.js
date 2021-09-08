@@ -73,9 +73,8 @@ const person = {
     ],
 };
 
-const makeFullName = () => {
-    return person.firstName.toUpperCase() + ' ' + person.surname.toUpperCase();
-};
+const makeFullName = () =>
+    `${person.firstName.toUpperCase()} ${person.surname.toUpperCase()}`;
 
 const findDaysSinceBirthday = () => {
     const birthday = new Date(person.birthday);
