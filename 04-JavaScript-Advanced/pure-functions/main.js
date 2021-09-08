@@ -73,18 +73,36 @@ const person = {
     ],
 };
 
-const fullName = () => {
+const makeFullName = () => {
     return person.firstName.toUpperCase() + ' ' + person.surname.toUpperCase();
 };
 
-const birthday = () => {
-    const randomDate = (person.birthday = new Date());
+const findDaysSinceBirthday = () => {
+    const birthday = new Date(person.birthday);
+    const sinceBirth = new Date('02/16/2021');
+
+    const daysSince = birthday.getTime() - sinceBirth.getTime();
+
     let ms = 1000 * 3600 * 24;
 
-    return randomDate / ms;
+    return daysSince / ms;
+};
+
+const findQuotesWithTech = () => {
+    let techQuoteArray = [];
+    person.quotes.forEach((quote) => {
+        if (quote.includes('Tech')) {
+            return techQuoteArray.push(quote);
+        } else {
+            console.log('nope not tech');
+        }
+    });
+
+    return techQuoteArray;
 };
 
 console.log('---------------------------------');
 
-console.log(fullName());
-console.log(birthday());
+console.log(makeFullName());
+console.log(findDaysSinceBirthday());
+console.log(findQuotesWithTech());
