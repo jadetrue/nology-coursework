@@ -17,8 +17,12 @@
  * @param {string} url - The url of the API to fetch from
  * @returns {{id: string, name: string, age: number, height: number, interests: string[], isEmployed: boolean}[]} The data from the API
  */
- export const getData = (url) => {
-  // Your code here
+export const getData = (url) => {
+    return fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            return data;
+        });
 };
 
 /**
@@ -28,7 +32,11 @@
  * @returns {string[]} The list of names from the API
  */
 export const getNames = (url) => {
-  // Your code here
+    return fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            return data.map((list) => list.name);
+        });
 };
 
 /**
@@ -38,7 +46,11 @@ export const getNames = (url) => {
  * @return {{id: string, name: string, age: number, height: number, interests: string[], isEmployed: boolean}[]} The employed people from the API
  */
 export const getEmployedPeople = (url) => {
-  // Your code here
+    return fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            return data.filter((list) => list.isEmployed);
+        });
 };
 
 /* Intermediate Challenges */
@@ -52,7 +64,12 @@ export const getEmployedPeople = (url) => {
  * @returns {{id: string, name: string, age: number, height: number, interests: string[], isEmployed: boolean} | string} A person object OR A string saying "Person not found"
  */
 export const findPersonWithId = (url, id) => {
-  // Your code here
+    return fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            const personWithID = data.find((person) => person.id === id);
+            return personWithID ? personWithID : "Person not found";
+        });
 };
 
 /**
@@ -64,7 +81,16 @@ export const findPersonWithId = (url, id) => {
  * @returns {{id: string, name: string, age: number, height: number, interests: string[], isEmployed: boolean}[] | string} A group of person objects OR A string saying "No people with interest found"
  */
 export const getPeopleWithMatchingInterests = (url, interest) => {
-  // Your code here
+    return fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            const sameInterests = data.filter((userInterest) => {
+                return userInterest.interests.includes(interest);
+            });
+            return sameInterests.length
+                ? sameInterests
+                : "No people with interest found";
+        });
 };
 
 /* Advanced Challenges */
@@ -102,7 +128,7 @@ export const getPeopleWithMatchingInterests = (url, interest) => {
  * @returns {{id: string, name: string, age: number, height: number, interests: string[], isEmployed: boolean, decscription: string}[]} A group of person objects with added description key
  */
 export const setDescriptions = (url) => {
-  // Your code here
+    // Your code here
 };
 
 /* Expert Challenges */
@@ -152,5 +178,5 @@ export const setDescriptions = (url) => {
  * }[]}
  */
 export const setInterestDetails = (peopleUrl, interestsUrl) => {
-  // Your code here
+    // Your code here
 };
