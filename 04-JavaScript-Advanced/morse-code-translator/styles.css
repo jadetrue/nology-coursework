@@ -42,6 +42,10 @@ body {
     background-color: #06d6a0;
 }
 
+.s2-toggled-fail {
+    background-color: #e84855;
+}
+
 .input-area,
 .output-area {
     background-color: #fcfcfc;
@@ -85,6 +89,11 @@ button {
     color: white;
 }
 
+.btn-clicked-fail {
+    background-color: #e84855;
+    color: white;
+}
+
 button:hover {
     cursor: pointer;
     transform: scale(0.96);
@@ -100,6 +109,10 @@ button:hover {
 }
 
 /* Misc styles */
+h3 {
+    color: #fff;
+}
+
 h4 {
     font-weight: 100;
 }
