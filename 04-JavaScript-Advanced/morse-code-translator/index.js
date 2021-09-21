@@ -16,7 +16,10 @@ const sectionTwo = document.querySelector(".s2");
 
 // Created my class for the Translator
 class Translator {
-    constructor() {}
+    constructor(english, morse) {
+        this.english = english;
+        this.morse = morse;
+    }
 
     translate() {
         // Object for the morse code alphabet
@@ -48,6 +51,8 @@ class Translator {
             y: "-.--",
             z: "--..",
         };
+
+        console.log(alphabet);
 
         // Loop through the object above to get the values only
         // Object.values(alphabet).forEach((letter) => console.log(letter));
