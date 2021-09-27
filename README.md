@@ -9,6 +9,8 @@
 📜 03 - JavaScript Fundamentals<br />
 🧪 04 - JavaScript Advanced & Testing<br />
 
+## Projects
+
 ## Author
 
 ✍️  GitHub - [@jadetruexo](https://github.com/jadetruexo/)
