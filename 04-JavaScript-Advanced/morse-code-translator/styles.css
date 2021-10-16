@@ -116,6 +116,10 @@ button:hover {
     margin-bottom: 10px;
 }
 
+.clear {
+    margin-top: 20px;
+}
+
 /* Misc styles */
 h3 {
     color: #fff;

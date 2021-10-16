@@ -1,10 +1,5 @@
 "use strict";
 
-// Breakdown
-
-// Grab the variables I want to interact with
-// To be moved to the relevant classes once refined
-
 const input = document.querySelector("input");
 const output = document.querySelector("output");
 
@@ -12,23 +7,20 @@ const switchBtn = document.querySelector(".switch");
 const switchTitle = document.querySelector("h4");
 
 const translateBtn = document.querySelector(".translate");
+const clearBtn = document.querySelector(".clear");
 const sectionTwo = document.querySelector(".s2");
 
+let outputArray = [];
+let newOutputArray = [];
 // Created my class for the Translator
 class Translator {
-    constructor(english, morse) {
-        this.english = english;
-        this.morse = morse;
-    }
-
-    translate() {
-        // Object for the morse code alphabet
-        const alphabet = {
+    constructor(alphabet, morse) {
+        this.alphabet = {
             a: ".-",
             b: "-...",
             c: "-.-.",
             d: "-..",
-            e: ".",
+            e: " .",
             f: "..-.",
             g: "--.",
             h: "....",
@@ -51,27 +43,55 @@ class Translator {
             y: "-.--",
             z: "--..",
         };
+        this.morse = {
+            ".-": "a",
+            "-...": "b",
+            "-.-.": "c",
+            "-..": "d",
+            " .": "e",
+            "..-.": "f",
+            "--.": "g",
+            "....": "h",
+            "..": "i",
+            ".---": "j",
+            "-.-": "k",
+            ".-..": "l",
+            "--": "m",
+            "-.": "n",
+            "---": "o",
+            ".--.": "p",
+            "--.-": "q",
+            "--.-": "r",
+            "...": "s",
+            "-": "t",
+            "..-": "u",
+            "...-": "v",
+            ".--": "w",
+            "-..-": "x",
+            "-.--": "y",
+            "--..": "z",
+        };
+    }
 
-        console.log(alphabet);
+    clearOutput() {
+        output.value = "";
+        localStorage.clear();
+        translateBtn.classList.remove("btn-clicked");
+        sectionTwo.classList.remove("s2-toggled");
+    }
 
-        // Loop through the object above to get the values only
-        // Object.values(alphabet).forEach((letter) => console.log(letter));
+    translate() {
+        // Object for the morse code alphabet
+        const inputValue = input.value.toLowerCase();
 
-        // using local storage to setItems and get them back on the page
-        const value = localStorage.setItem(alphabet, input.value);
-        const inputValue = localStorage.getItem(alphabet, value);
+        Object.values(inputValue).forEach((letter) =>
+            outputArray.push(this.alphabet[letter])
+        );
 
-        const string = JSON.stringify(inputValue);
-        const newVal = JSON.parse(string);
+        const newValue = outputArray.join("");
 
-        output.innerHTML = newVal;
-
-        // Error handling
-        if (!newVal) {
-            translateBtn.classList.toggle("btn-clicked-fail");
-            sectionTwo.classList.toggle("s2-toggled-fail");
-            output.innerHTML = `You need to enter some text`;
-        }
+        output.innerHTML = newValue;
+        input.value = "";
     }
 
     // Method for switching the title. To be moved elsewhere
@@ -85,21 +105,26 @@ class Translator {
 
     // Method for if its translated successfully.
     handleTranslateBtnSuccess() {
-        translateBtn.classList.toggle("btn-clicked");
-        sectionTwo.classList.toggle("s2-toggled");
+        translateBtn.classList.add("btn-clicked");
+        sectionTwo.classList.add("s2-toggled");
     }
 }
 
 // Created a new translator
 const translator = new Translator();
 
-// Adding Event Listeners to the 2 buttons
+// Adding Event Listeners to the buttons
 
 switchBtn.addEventListener("click", () => {
     translator.switchTitle();
+    translator.clearOutput();
 });
 
 translateBtn.addEventListener("click", () => {
     translator.handleTranslateBtnSuccess();
     translator.translate();
+});
+
+clearBtn.addEventListener("click", () => {
+    translator.clearOutput();
 });
