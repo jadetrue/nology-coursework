@@ -42,6 +42,7 @@ class Translator {
             x: "-..-",
             y: "-.--",
             z: "--..",
+            " ": "/",
         };
         this.morse = {
             ".-": "a",
@@ -74,7 +75,7 @@ class Translator {
     }
 
     clearOutput() {
-        output.value = "";
+        output.value = " ";
         localStorage.clear();
         translateBtn.classList.remove("btn-clicked");
         sectionTwo.classList.remove("s2-toggled");
