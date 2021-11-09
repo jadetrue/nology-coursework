@@ -1,0 +1,3 @@
+[submodule "05-React/05-React/mealworm-functional"]
+	path = 05-React/05-React/mealworm-functional
+	url = https://github.com/nology-tech/mealworm-functional
