@@ -1,8 +1,8 @@
 // Resets, variables, mixins, and any utility classes.
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,800;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,800;1,300&display=swap");
 
-$primary-color: #03045E;
+$primary-color: #03045e;
 $secondary-color: #caf0f8;
 
 $bp-tablet: 768px;
@@ -12,7 +12,7 @@ $bp-desktop: 1140px;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: $secondary-color;
 }
 
@@ -39,12 +39,12 @@ textarea {
     border: none;
     outline: none;
     resize: none;
-    transition: all 0.30s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-input[type=text]:focus,
+input[type="text"]:focus,
 textarea:focus,
-input[type=email]:focus {
+input[type="email"]:focus {
     box-shadow: 0 0 20px $secondary-color;
     border: 1px solid $primary-color;
 }

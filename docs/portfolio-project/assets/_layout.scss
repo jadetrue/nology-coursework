@@ -16,7 +16,6 @@ section {
 }
 
 .landing-page {
-
     overflow: hidden;
     position: relative;
 
@@ -82,7 +81,6 @@ section {
 }
 
 .about {
-
     & .image {
         width: 200px;
         height: 200px;
@@ -94,77 +92,75 @@ section {
         background-position-y: center;
         margin: 20px;
     }
-
 }
 
-.socials {
-    font-size: 60px;
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    left: 0;
-    background-color: transparent;
-    z-index: 1;
+// .socials {
+//     font-size: 60px;
+//     width: 100%;
+//     position: absolute;
+//     text-align: center;
+//     left: 0;
+//     background-color: transparent;
+//     z-index: 1;
 
-    @media (min-width: $bp-tablet) {
-        position: fixed;
-        width: 172px;
-        height: 77px;
-        left: 75%;
-        bottom: 4vh;
-    }
+//     @media (min-width: $bp-tablet) {
+//         position: fixed;
+//         width: 172px;
+//         height: 77px;
+//         left: 75%;
+//         bottom: 4vh;
+//     }
 
-    @media (min-width: $bp-desktop) {
-        left: 85%;
-        transition: transform .7s ease-in-out;
-    }
+//     @media (min-width: $bp-desktop) {
+//         left: 85%;
+//         transition: transform 0.7s ease-in-out;
+//     }
 
-    & a {
-        color: $primary-color;
+//     & a {
+//         color: $primary-color;
 
-        @media (min-width: $bp-desktop) {
-            color: $secondary-color;
-        }
-    }
+//         @media (min-width: $bp-desktop) {
+//             color: $secondary-color;
+//         }
+//     }
 
-    &__icon {
+//     &__icon {
+//         &--github {
+//             margin-right: 20px;
+//             background-color: transparent;
 
-        &--github {
-            margin-right: 20px;
-            background-color: transparent;
+//             @media (min-width: $bp-tablet) {
+//                 margin-right: 0;
+//             }
 
-            @media (min-width: $bp-tablet) {
-                margin-right: 0;
-            }
+//             @media (min-width: $bp-desktop) {
+//                 transition: transform 0.7s ease-in-out;
+//             }
 
-            @media (min-width: $bp-desktop) {
-                transition: transform .7s ease-in-out;
-            }
+//             &:hover {
+//                 @media (min-width: $bp-desktop) {
+//                     opacity: 0.5;
+//                     transform: rotate(360deg);
+//                 }
+//             }
+//         }
 
-            &:hover {
-                @media (min-width: $bp-desktop) {
-                    opacity: .5;
-                    transform: rotate(360deg);
-                }
-            }
-        }
+//         &--at {
+//             background-color: transparent;
 
-        &--at {
-            background-color: transparent;
+//             @media (min-width: $bp-desktop) {
+//                 transition: transform 0.7s ease-in-out;
+//             }
 
-            @media (min-width: $bp-desktop) {
-                transition: transform .7s ease-in-out;
-            }
-
-            &:hover {
-                @media (min-width: $bp-desktop) {
-                    opacity: .5;
-                    transform: rotate(360deg);
-                }
-            }
-        }
-    }
-}
+//             &:hover {
+//                 @media (min-width: $bp-desktop) {
+//                     opacity: 0.5;
+//                     transform: rotate(360deg);
+//                 }
+//             }
+//         }
+//     }
+// }
 
 .links {
     display: flex;
@@ -180,70 +176,98 @@ section {
     }
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
+.contact {
+    & .socials_block {
+        display: flex;
+        gap: 20px;
+        margin-top: 50px;
+        font-size: 40px;
 
-    @media (min-width: $bp-tablet) {
-        width: 80%;
-    }
+        @media (min-width: $bp-tablet) {
+            justify-content: center;
+        }
 
-    @media (min-width: $bp-desktop) {
+        &--icon {
+            transition: transform 0.7s ease-in-out;
 
-        display: grid;
-        width: 45%;
-        grid-template-columns: 50% 50%;
-        grid-gap: 20px;
+            @media (min-width: $bp-tablet) {
+                padding: 20px;
+            }
+        }
 
-        & .full-width {
-            grid-column: 1 / 3;
+        &--icon:hover {
+            @media (min-width: $bp-tablet) {
+                opacity: 0.5;
+                transform: rotate(360deg);
+            }
         }
     }
 }
 
-.projects__list {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0 40px 0;
-    width: 100%;
+// .form {
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     text-align: center;
+//     padding: 20px;
 
-    @media (min-width: $bp-desktop) {
-        width: unset;
-    }
+//     @media (min-width: $bp-tablet) {
+//         width: 80%;
+//     }
 
-    & .container {
-        background-color: #c4c4c4;
-        border: 10px solid $secondary-color;
-        border-radius: 50%;
-        height: 176px;
-        width: 176px;
+//     @media (min-width: $bp-desktop) {
+//         display: grid;
+//         width: 45%;
+//         grid-template-columns: 50% 50%;
+//         grid-gap: 20px;
 
-        @media (min-width: $bp-tablet) {}
+//         & .full-width {
+//             grid-column: 1 / 3;
+//         }
+//     }
+// }
 
-        @media (min-width: $bp-desktop) {
-            height: 500px;
-            width: 500px;
-        }
-    }
+// .projects__list {
+//     display: flex;
+//     justify-content: center;
+//     margin: 40px 0 40px 0;
+//     width: 100%;
 
-    & .prev,
-    & .next {
-        border-radius: 50%;
-        border: 5px solid $secondary-color;
-        width: 31.6px;
-        height: 31.6px;
-        margin: 25% 10px 0px 10px;
+//     @media (min-width: $bp-desktop) {
+//         width: unset;
+//     }
 
+//     & .container {
+//         background-color: #c4c4c4;
+//         border: 10px solid $secondary-color;
+//         border-radius: 50%;
+//         height: 176px;
+//         width: 176px;
 
-        @media (min-width: $bp-tablet) {}
+//         @media (min-width: $bp-tablet) {
+//         }
 
-        @media (min-width: $bp-desktop) {
-            height: 51.6px;
-            width: 51.6px;
-            margin: 28% 50px 0px 50px;
-        }
-    }
-}
+//         @media (min-width: $bp-desktop) {
+//             height: 500px;
+//             width: 500px;
+//         }
+//     }
+
+//     & .prev,
+//     & .next {
+//         border-radius: 50%;
+//         border: 5px solid $secondary-color;
+//         width: 31.6px;
+//         height: 31.6px;
+//         margin: 25% 10px 0px 10px;
+
+//         @media (min-width: $bp-tablet) {
+//         }
+
+//         @media (min-width: $bp-desktop) {
+//             height: 51.6px;
+//             width: 51.6px;
+//             margin: 28% 50px 0px 50px;
+//         }
+//     }
+// }
