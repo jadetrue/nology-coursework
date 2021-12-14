@@ -1,27 +1,25 @@
 import React, {createContext, useState} from "react";
 import {UserProvider} from "./UserProvider";
 
-export const ThemeProvider = createContext({});
+export const ThemeContext = createContext({});
 
-const ThemeProviderComponent = () => {
-    const [theme, setTheme] = useState(false);
+const ThemeProvider = () => {
+    const [isDarkTheme, setIsDarkTheme] = useState(false);
 
     const toggleTheme = () => {
-        setTheme(!theme);
+        setIsDarkTheme(!isDarkTheme);
     };
 
-    const themeData = {
-        isDarkTheme: theme,
+    const theme = {
+        isDarkTheme: isDarkTheme,
         toggleTheme: toggleTheme,
     };
 
     return (
-        <div>
-            <ThemeProviderComponent value={themeData}>
-                <UserProvider />
-            </ThemeProviderComponent>
-        </div>
+        <ThemeContext.Provider value={theme}>
+            <UserProvider />
+        </ThemeContext.Provider>
     );
 };
 
-export default ThemeProviderComponent;
+export default ThemeProvider;
