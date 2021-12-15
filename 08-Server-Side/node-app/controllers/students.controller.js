@@ -1,17 +1,24 @@
+const Student = require("../model/student.js");
+
 const findAll = (req, res) => {
-    res.status(200).send({message: "All students display here"});
+    const students = Student.findAll();
+    res.status(200).send({students});
 };
 
 const find = (req, res) => {
-    res.status(200).send({message: "One specific student to display here"});
+    const student = Student.find(req.params.id);
+    res.status(200).send({student});
 };
 
 const create = (req, res) => {
-    res.status(201).send({message: "Create a new student"});
+    const newStudent = new Student(req.body);
+    const message = student.save();
+    res.status(201).send({message, newStudent});
 };
 
 const deleted = (req, res) => {
-    res.status(200).send({message: "Delete a student"});
+    const message = Student.deleted(req.params.id);
+    res.status(200).send({message});
 };
 
 module.exports = {findAll, find, create, deleted};
