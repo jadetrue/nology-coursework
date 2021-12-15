@@ -1,4 +1,4 @@
-const Student = require("../model/student.js");
+const Student = require("../models/student.js");
 
 const findAll = (req, res) => {
     const students = Student.findAll();
@@ -12,7 +12,7 @@ const find = (req, res) => {
 
 const create = (req, res) => {
     const newStudent = new Student(req.body);
-    const message = student.save();
+    const message = newStudent.save();
     res.status(201).send({message, newStudent});
 };
 
