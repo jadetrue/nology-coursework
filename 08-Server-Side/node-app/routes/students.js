@@ -15,7 +15,7 @@ router.post("/", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-    res.status(204).send({message: "Deleted a student"});
+    res.status(200).send({message: "Deleted a student"});
 });
 
 module.exports = router;
