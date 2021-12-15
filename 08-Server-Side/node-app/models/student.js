@@ -1,3 +1,5 @@
+const db = require("../config/firebase.js");
+
 class Student {
     constructor(data) {
         this.id = data.id;
@@ -14,8 +16,10 @@ class Student {
         return `I am a student with an id of ${id}`;
     }
 
-    save() {
-        return "Created account for student";
+    async save() {
+        // this.dateModified = new Date().toUTCString();
+        const student = {...this};
+        const res = await db.collection("students").doc().set(student);
     }
 
     static delete(id) {
