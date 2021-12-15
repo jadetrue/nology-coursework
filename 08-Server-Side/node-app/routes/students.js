@@ -1,21 +1,14 @@
 const Router = require("express");
+const students = require("../controllers/students.controller.js");
 
 const router = Router();
 
-router.get("/", (req, res) =>
-    res.status(200).send({message: "Here is all the students"})
-);
+router.get("/", students.findAll);
 
-router.get("/:id", (req, res) =>
-    res.status(200).send({message: "Here is a specific student"})
-);
+router.get("/:id", students.find);
 
-router.post("/", (req, res) =>
-    res.status(201).send({message: "Created new student"})
-);
+router.post("/", students.create);
 
-router.delete("/:id", (req, res) =>
-    res.status(200).send({message: "Delete a student"})
-);
+router.delete("/:id", students.deleted);
 
 module.exports = router;
