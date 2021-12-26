@@ -8,6 +8,10 @@
 🕸️ 02 - Web Fundamentals<br />
 📜 03 - JavaScript Fundamentals<br />
 🧪 04 - JavaScript Advanced & Testing<br />
+⚛️ 05 - React<br />
+:octocat: 06 - Collaboration<br />
+⚙️ 07 - Client Project Tools<br />
+🗂️ 08 - Server Side Programming<br />
 
 ## Projects
 
