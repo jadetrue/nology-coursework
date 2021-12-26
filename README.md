@@ -15,6 +15,9 @@
 
 ## Projects
 
+🍻 [Beer App - Punk API](https://github.com/jadetruexo/addict-beer-app)<br />
+🔢 [JavaScript OOP Calculator](https://github.com/jadetruexo/javascript-calculator)<br />
+
 ## Author
 
 ✍️  GitHub - [@jadetruexo](https://github.com/jadetruexo/)
