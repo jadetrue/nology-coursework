@@ -17,6 +17,7 @@
 
 🍻 [Beer App - Punk API](https://github.com/jadetruexo/addict-beer-app)<br />
 🔢 [JavaScript OOP Calculator](https://github.com/jadetruexo/javascript-calculator)<br />
+🗂️ [NodeJS API - Adding & removing family members](https://github.com/jadetruexo/nology-coursework/tree/main/08-Server-Side/nodejs)
 
 ## Author
 
