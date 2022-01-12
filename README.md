@@ -1,6 +1,6 @@
 # _nology - self-paced software developer course 👩‍💻
 #### Started: 29th March 2021
-#### Completed: TBC
+#### Completed: 12th Jan 2022
 
 ## Modules
 
